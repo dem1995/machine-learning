@@ -8,23 +8,13 @@ title: External Resources
 Brian Sanderson (better known as 3Blue1Brown) has a fantastic four-video series on Neural Networks that covers the mathematics behind basic NNs, including gradients and backpropogation.
 The first video in the series by itself offers a really good overview of how Neural Networks function as well, however.
 
-<a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi">
-<img
-  src="https://i9.ytimg.com/s_p/PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi/landscape_sddefault.jpg?sqp=CJTpif8Fir7X7AMGCNGyiNsF&rs=AOn4CLBRdJt2d73TzhcrI2SsqonRVsxaBQ&v=1533155665" 
-  alt="Link to 3Blue1Brown's Neural Network series"
-  height="200"
-  class="center"/></a>
+![Link to 3Blue1Brown's Neural Network series](neural_network_series_thumbnail_half.jpg)
 
 ### 3Blue1Brown (Brian Sanderson)'s _Essence of Linear Algebra_ series
 Videos 1-9 and 13 of Brian Sanderson's _Essence of Linear Algebra_ series provide powerful intuition for understanding matrix transformations on a deeper level, and for interpreting linear regression more comprehensively.
 Remembering all of these videos' contents is possibly overkill, but having some level of awareness of the concepts discussed in them can make your life easier.
 
-<a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">
-<img
-  src="https://i9.ytimg.com/s_p/PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab/landscape_sddefault.jpg?sqp=CLjdif8Fir7X7AMGCOqwiNsF&rs=AOn4CLBxc7iVI4XFfR51_DHRF-OqQtPemw&v=1533155434" 
-  alt="Link to 3Blue1Brown's Essence of Linear Algebra series"
-  height="200"
-  class="center"/></a>
+![Link to 3Blue1Brown's Essence of Linear Algebra series](linear_algebra_series_thumbnail_half.jpg)
 
 ## PDF Resources
 ### Professor Martha White's _Machine Learning Handbook_

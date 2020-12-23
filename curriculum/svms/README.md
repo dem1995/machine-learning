@@ -6,8 +6,8 @@ nav_order: 10
 ---
 
 ### External Resources
-- https://towardsdatascience.com/https-medium-com-pupalerushikesh-svm-f4b42800e989 provides a good overview of SVMs/parameters, as well as a straightforward example of a kernel transformation
-- https://towardsdatascience.com/support-vector-machines-explained-with-python-examples-cb65e8172c85/ provides a more in-depth exploration of SVMS, and has some good Python examples
+- [Support Vector Machines(SVM) — An Overview](https://towardsdatascience.com/https-medium-com-pupalerushikesh-svm-f4b42800e989) provides a good overview of SVMs/parameters, as well as a straightforward example of a kernel transformation
+- [Support Vector Machines explained with Python examples](https://towardsdatascience.com/support-vector-machines-explained-with-python-examples-cb65e8172c85/) provides a more in-depth exploration of SVMS and some of the math, as well as providing some good Python examples
 
 # Support Vector Machines
 

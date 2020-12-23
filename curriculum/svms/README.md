@@ -10,6 +10,7 @@ nav_order: 10
 - [Support Vector Machines explained with Python examples](https://towardsdatascience.com/support-vector-machines-explained-with-python-examples-cb65e8172c85/) provides a more in-depth exploration of SVMS and some of the math, as well as providing some good Python examples
 
 # Support Vector Machines
+## Maximum-Margin SVMs
 
 ### Introduction
 The basic premise behind Support Vector Machines (SVMs) is that they provide a **supervised method for finding an efficient binary classifier**. Specifically, given a set of labelled vectors in *n* dimensions, we **find a line/plane** (linear equation) in *n*-1 dimensions **that best partitions our vectors**. 
@@ -37,3 +38,6 @@ Looking at the line again, we've highlighted the closest vectors, known as the *
 
 ### Support Vector Intuition
 Notice that, as the optimal hyperplane is that which separates the classes and maximizes the margin to the closest vectors (aka the support vectors), **the optimal hyperplane is entirely defined by the support vectors**.
+
+## Non linearly-separable SVMs
+Todo

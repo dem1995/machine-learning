@@ -5,7 +5,12 @@ parent: Curriculum
 nav_order: 10
 ---
 
+### External Resources
+- https://towardsdatascience.com/https-medium-com-pupalerushikesh-svm-f4b42800e989 provides a good overview of SVMs/parameters, as well as a straightforward example of a kernel transformation
+- https://towardsdatascience.com/support-vector-machines-explained-with-python-examples-cb65e8172c85/ provides a more in-depth exploration of SVMS, and has some good Python examples
+
 # Support Vector Machines
+
 ### Introduction
 The basic premise behind Support Vector Machines (SVMs) is that they provide a **supervised method for finding an efficient binary classifier**. Specifically, given a set of labelled vectors in *n* dimensions, we **find a line/plane** (linear equation) in *n*-1 dimensions **that best partitions our vectors**. 
 
@@ -24,7 +29,7 @@ In the previous example, the demonstrated line actually is the result of running
 
 All of these green lines separate the vectors properly, and indeed could all be used to generate equations for determining the vectors. The line on the left, though, maximizes the distance to the closest sample in each class, and so **typically generalizes best to out-of-sample data**. 
 
-Sure, we could have some wonky underlying distribution, such as where the circles actually appear really close to the squares (or even within the cavity of the squares), but with the information we _know_ (i.e. our collection of samples) additional justification would be needed for choosing anything but this line.
+Sure, we could have some wonky underlying distribution, such as where the circles actually appear really close to the squares (or even within the cavity of the squares), but with the information we _know_ (i.e. our collection of completely-separable samples) additional justification would be needed for choosing anything but this line.
 
 Looking at the line again, we've highlighted the closest vectors, known as the **_support vectors_** as well as indicated what we mean when we say "maximizing the distance to the closest sample in each class", also known as the **_margin_**.
 

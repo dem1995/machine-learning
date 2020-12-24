@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Linear Algebra & Probability
+title: Probability
 parent: Curriculum
 nav_order: 1
 ---

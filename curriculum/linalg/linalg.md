@@ -63,10 +63,12 @@ Below are the fundamental 2D linear transformations/matrices
 #### Identity
 The identity transformation takes in a vector and spits out the same vector. The matrix is
 
+<center>
 <img src="https://i.upmath.me/svg/I%3D%5Cbegin%7Bbmatrix%7D%0A1%20%26%200%20%5C%5C%0A0%20%26%201%20%5C%5C%0A%5Cend%7Bbmatrix%7D" alt="I=\begin{bmatrix}
 1 &amp; 0 \\
 0 &amp; 1 \\
 \end{bmatrix}" />
+</center>
 
 You might notice that I'm mixing the terms matrix and transformation a bit - the identity matrix is _I_ as given above, and the identity transformation on a vector is just multiplying the matrix by that vector: <img src="https://i.upmath.me/svg/I(%5Cvec%7Bv%7D)%3D%5Cbegin%7Bbmatrix%7D%0A1%20%26%200%20%5C%5C%0A0%20%26%201%20%5C%5C%0A%5Cend%7Bbmatrix%7D%5Cvec%7Bv%7D" alt="I(\vec{v})=\begin{bmatrix}
 1 &amp; 0 \\
@@ -75,7 +77,7 @@ You might notice that I'm mixing the terms matrix and transformation a bit - the
 #### Scaling
 Scaling matrices scale vectors along the directions of the basis vectors (the default axes). They take the form
 
-<img src="https://i.upmath.me/svg/L%3D%5Cbegin%7Bbmatrix%7Dk_1%260%5C%5C0%26k_2%5C%5C%5Cend%7Bbmatrix%7D" alt="L=\begin{bmatrix}k_1&amp;0\\0&amp;k_2\\\end{bmatrix}" />
+<center><img src="https://i.upmath.me/svg/L%3D%5Cbegin%7Bbmatrix%7Dk_1%260%5C%5C0%26k_2%5C%5C%5Cend%7Bbmatrix%7D" alt="L=\begin{bmatrix}k_1&amp;0\\0&amp;k_2\\\end{bmatrix}" /></center>
 
 As an example, consider the matrix
 
@@ -85,4 +87,4 @@ As an example, consider the matrix
 ###
 
 ## Beyond Linear Transformations
-FOr this course,
+FOr this course, 

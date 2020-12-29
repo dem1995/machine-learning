@@ -53,7 +53,7 @@ Now, suppose you wanted to convert this into metric measurements (because the un
 Intuitively, a linear transformation is one that, if applied to a coordinate space, **preserves lines**, **preserves ratios of distances between points**, and that **map the origin to itself**. If any one of these is violated, the transformation is not linear. As an example, any transformation that translates the vector (0, 0) is not linear.
 #### Formally
 Formally, a linear transformation _T_: *V* ⭢ *W* (where _V_ and _W_ are real vector spaces) is any transformation that satisfies the following two axioms:
-|&nbsp;|&nbsp;|&nbsp;|
+|   |   |   |
 |---|---|---|
 | **Additivity** | <img src="https://i.upmath.me/svg/L(%5Cvec%7Bv%7D_1%2B%5Cvec%7Bv%7D_2)%3DL(%5Cvec%7Bv%7D_1)%2BL(%5Cvec%7Bv%7D_2)" alt="L(\vec{v}_1+\vec{v}_2)=L(\vec{v}_1)+L(\vec{v}_2)" /> &nbsp;&nbsp;| <img src="https://i.upmath.me/svg/%5Cforall%20%5Cvec%7Bv%7D_1%2C%20%5Cvec%7Bv%7D_2%20%5Cin%20V" alt="\forall \vec{v}_1, \vec{v}_2 \in V" /> |
 | **Homogeneity** | <img src="https://i.upmath.me/svg/L(r%5Cvec%7Bv%7D)%3DrL(%5Cvec%7Bv%7D)" alt="L(r\vec{v})=rL(\vec{v})" /> |<img src="https://i.upmath.me/svg/%5Cforall%20%5Cvec%7Bv%7D%20%5Cin%20V%2C%20r%5Cin%20%5CR" alt="\forall \vec{v} \in V, r\in \R" />
@@ -66,18 +66,23 @@ The identity transformation takes in a vector and spits out the same vector. The
 <img src="https://i.upmath.me/svg/I%3D%5Cbegin%7Bbmatrix%7D%0A1%20%26%200%20%5C%5C%0A0%20%26%201%20%5C%5C%0A%5Cend%7Bbmatrix%7D" alt="I=\begin{bmatrix}
 1 &amp; 0 \\
 0 &amp; 1 \\
-\end{bmatrix}" />. 
+\end{bmatrix}" />
 
 You might notice that I'm mixing the terms matrix and transformation a bit - the identity matrix is _I_ as given above, and the identity transformation on a vector is just multiplying the matrix by that vector: <img src="https://i.upmath.me/svg/I(%5Cvec%7Bv%7D)%3D%5Cbegin%7Bbmatrix%7D%0A1%20%26%200%20%5C%5C%0A0%20%26%201%20%5C%5C%0A%5Cend%7Bbmatrix%7D%5Cvec%7Bv%7D" alt="I(\vec{v})=\begin{bmatrix}
 1 &amp; 0 \\
 0 &amp; 1 \\
 \end{bmatrix}\vec{v}" /> (which is just <img src="https://i.upmath.me/svg/%5Cvec%7Bv%7D" alt="\vec{v}" />). 
 #### Scaling
-Scaling matrices 
+Scaling matrices scale vectors along the directions of the basis vectors (the default axes). They take the form
+
+<img src="https://i.upmath.me/svg/L%3D%5Cbegin%7Bbmatrix%7Dk_1%260%5C%5C0%26k_2%5C%5C%5Cend%7Bbmatrix%7D" alt="L=\begin{bmatrix}k_1&amp;0\\0&amp;k_2\\\end{bmatrix}" />
+
+As an example, consider the matrix
+
 #### Reflection
 #### Rotation
 #### Shearing
 ###
 
 ## Beyond Linear Transformations
-FOr this course, 
+FOr this course,

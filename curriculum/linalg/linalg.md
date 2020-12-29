@@ -53,7 +53,7 @@ Now, suppose you wanted to convert this into metric measurements (because the un
 Intuitively, a linear transformation is one that, if applied to a coordinate space, **preserves lines**, **preserves ratios of distances between points**, and that **map the origin to itself**. If any one of these is violated, the transformation is not linear. As an example, any transformation that translates the vector (0, 0) is not linear.
 #### Formally
 Formally, a linear transformation _T_: *V* ⭢ *W* (where _V_ and _W_ are real vector spaces) is any transformation that satisfies the following two axioms:
-|   |   |   |
+|&nbsp;|&nbsp;|&nbsp;|
 |---|---|---|
 | **Additivity** | <img src="https://i.upmath.me/svg/L(%5Cvec%7Bv%7D_1%2B%5Cvec%7Bv%7D_2)%3DL(%5Cvec%7Bv%7D_1)%2BL(%5Cvec%7Bv%7D_2)" alt="L(\vec{v}_1+\vec{v}_2)=L(\vec{v}_1)+L(\vec{v}_2)" /> &nbsp;&nbsp;| <img src="https://i.upmath.me/svg/%5Cforall%20%5Cvec%7Bv%7D_1%2C%20%5Cvec%7Bv%7D_2%20%5Cin%20V" alt="\forall \vec{v}_1, \vec{v}_2 \in V" /> |
 | **Homogeneity** | <img src="https://i.upmath.me/svg/L(r%5Cvec%7Bv%7D)%3DrL(%5Cvec%7Bv%7D)" alt="L(r\vec{v})=rL(\vec{v})" /> |<img src="https://i.upmath.me/svg/%5Cforall%20%5Cvec%7Bv%7D%20%5Cin%20V%2C%20r%5Cin%20%5CR" alt="\forall \vec{v} \in V, r\in \R" />

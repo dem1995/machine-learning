@@ -32,5 +32,52 @@ m_{31} \cdot v_a + m_{32} \cdot v_b
 \end{bmatrix}
 " />
 
+or, as a further visual,
 
-  As an example, suppose we wanted to encode information about chocolate chips and cookie dough. 
+![Matrix-vector multiplication visual](matmul.png)
+
+## Motivating Example
+
+Now, suppose we're dealing with chocolate-chip cookies, and we want to encode information about the chocolate chips and cookie dough used. We might care about the volume, that is, how many cups\* of each we have. Suppose in our last batch of cookies we used 10 cups of dough and 2 cups of chocolate-chip cookies. We might represent this, then, as
+
+<img src="https://i.upmath.me/svg/%5Cvec%7Bv%7D%3D%5Cbegin%7Bbmatrix%7D%0A10%20%5Ctextup%7B%20cups%20of%20dough%7D%20%5C%5C%0A2%20%5Ctextup%7B%20cups%20of%20chocolate%20chips%7D%20%5C%5C%0A%5Cend%7Bbmatrix%7D" alt="\vec{v}=\begin{bmatrix}
+10 \textup{ cups of dough} \\
+2 \textup{ cups of chocolate chips} \\
+\end{bmatrix}" />
+ 
+Now, suppose you wanted to convert this into metric measurements (because the units are easier and/or you aren't in upper North America). You could accomplish this with the
+
+## Linear Transformations
+### What are Linear Transformations?
+#### Intuitively
+Intuitively, a linear transformation is one that, if applied to a coordinate space, **preserves lines**, **preserves ratios of distances between points**, and that **map the origin to itself**. If any one of these is violated, the transformation is not linear. As an example, any transformation that translates the vector (0, 0) is not linear.
+#### Formally
+Formally, a linear transformation _T_: *V* ⭢ *W* (where _V_ and _W_ are real vector spaces) is any transformation that satisfies the following two axioms:
+|   |   |   |
+|---|---|---|
+| **Additivity** | <img src="https://i.upmath.me/svg/L(%5Cvec%7Bv%7D_1%2B%5Cvec%7Bv%7D_2)%3DL(%5Cvec%7Bv%7D_1)%2BL(%5Cvec%7Bv%7D_2)" alt="L(\vec{v}_1+\vec{v}_2)=L(\vec{v}_1)+L(\vec{v}_2)" /> &nbsp;&nbsp;| <img src="https://i.upmath.me/svg/%5Cforall%20%5Cvec%7Bv%7D_1%2C%20%5Cvec%7Bv%7D_2%20%5Cin%20V" alt="\forall \vec{v}_1, \vec{v}_2 \in V" /> |
+| **Homogeneity** | <img src="https://i.upmath.me/svg/L(r%5Cvec%7Bv%7D)%3DrL(%5Cvec%7Bv%7D)" alt="L(r\vec{v})=rL(\vec{v})" /> |<img src="https://i.upmath.me/svg/%5Cforall%20%5Cvec%7Bv%7D%20%5Cin%20V%2C%20r%5Cin%20%5CR" alt="\forall \vec{v} \in V, r\in \R" />
+
+### Examples
+Below are the fundamental 2D linear transformations/matrices
+#### Identity
+The identity transformation takes in a vector and spits out the same vector. The matrix is
+
+<img src="https://i.upmath.me/svg/I%3D%5Cbegin%7Bbmatrix%7D%0A1%20%26%200%20%5C%5C%0A0%20%26%201%20%5C%5C%0A%5Cend%7Bbmatrix%7D" alt="I=\begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 1 \\
+\end{bmatrix}" />. 
+
+You might notice that I'm mixing the terms matrix and transformation a bit - the identity matrix is _I_ as given above, and the identity transformation on a vector is just multiplying the matrix by that vector: <img src="https://i.upmath.me/svg/I(%5Cvec%7Bv%7D)%3D%5Cbegin%7Bbmatrix%7D%0A1%20%26%200%20%5C%5C%0A0%20%26%201%20%5C%5C%0A%5Cend%7Bbmatrix%7D%5Cvec%7Bv%7D" alt="I(\vec{v})=\begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 1 \\
+\end{bmatrix}\vec{v}" /> (which is just <img src="https://i.upmath.me/svg/%5Cvec%7Bv%7D" alt="\vec{v}" />). 
+#### Scaling
+Scaling matrices 
+#### Reflection
+#### Rotation
+#### Shearing
+###
+
+## Beyond Linear Transformations
+FOr this course, 

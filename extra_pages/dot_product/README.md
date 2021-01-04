@@ -6,7 +6,7 @@ nav_order: 1
 ---
 
 ### External Resources
-- [Interactive Dot Product Demo](https://www.geogebra.org/m/yqnsrnvs/) I've created an interactive demo for understanding the dot product better to accompany this page.
+- [Interactive Dot Product Demo](https://www.geogebra.org/m/yqnsrnvs) I've created an interactive demo for understanding the dot product better to accompany this page.
 
 # Vector Dot Product Intuition
 ## Page Purpose

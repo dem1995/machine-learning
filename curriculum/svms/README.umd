@@ -97,7 +97,7 @@ $$\begin{align*}
 					& \xi_i \geq 0
 \end{align*}$$
 
-Okay, so I lied a little bit. However, letting *C* ≥ 0, you can ignore ξ (COVID-1perk- I don't need to write this for you all on a whiteboard*) and convert this into
+Okay, so I lied a little bit by virtue of neglecting to mention ξ. However, letting *C* ≥ 0, you can ignore ξ (minor COVID-19 perk- I don't need to write this for you all on a whiteboard*) and convert this into
 
 $$\begin{align*}(\g \vec{w}^*, b^*) = 
 \underbrace{

@@ -26,7 +26,7 @@ In other words, the dot product of **u** and **v** is just **the degree by which
 This, intuitively, ranges from 0 (when they are perpendicular) to **\|u\|\|v\|** (when they are codirectional) to **--\|u\|\|v\|** (when they are antidirectional).
 
 
-### Via scalar projections
+## Via scalar projections
 Put another way,\
 <img src="https://i.upmath.me/svg/%5Cmathbf%7Bu%7D%20%5Ccdot%20%5Cmathbf%7Bv%7D%20%3D%20u_%5Cmathbf%7Bv%7D%20%5Cleft%20%5C%7C%20%5Cmathbf%7Bv%7D%20%5Cright%20%5C%7C" alt="\mathbf{u} \cdot \mathbf{v} = u_\mathbf{v} \left \| \mathbf{v} \right \|" />, where <img src="https://i.upmath.me/svg/u_%5Cmathbf%7Bv%7D" alt="u_\mathbf{v}" /> is the scalar projection of **u** onto **v**\
 <img src="https://i.upmath.me/svg/%5Cmathbf%7Bu%7D%20%5Ccdot%20%5Cmathbf%7Bv%7D%20%3D%20v_%5Cmathbf%7Bu%7D%20%5Cleft%20%5C%7C%20%5Cmathbf%7Bu%7D%20%5Cright%20%5C%7C" alt="\mathbf{u} \cdot \mathbf{v} = v_\mathbf{u} \left \| \mathbf{u} \right \|" />, where <img src="https://i.upmath.me/svg/v_%5Cmathbf%7Bu%7D" alt="v_\mathbf{u}" /> is the scalar projection of **v** onto **u**
@@ -40,9 +40,9 @@ The below image provides some summarizing visual intuition behind the scalar pro
 |**a**|cos(θ) are both valid ways of writing <img src="https://i.upmath.me/svg/a_%5Cmathbf%7Bb%7D" alt="a_\mathbf{b}" /> (the scalar projection of **a** onto **b**), and multiplying it by **b** so yields the dot product.\
 ![Dot product intuition](https://raw.githubusercontent.com/dem1995/algorithms/main/math/dotproducts/dotprod-intuition.png?style=centered)
 
-### Via component-wise multiplication dot product definition
+## Via component-wise multiplication dot product definition
 The image below provides a derivation of the cosine dot product definition via the component-wise dot product definition.\
 ![A derivation of the cosine dot product definition via the component-wise dot product definition, from Dr. Seidler's website at the University of Washington from 1998](https://raw.githubusercontent.com/dem1995/algorithms/main/math/dotproducts/dotprod-seidler-derivation.gif?style=centered)
 
-### Sources
+## Sources
 The hand-drawn images for this page were taken from Dr. Seidler's Winter 1998 Phys 121 page at the University of Washington (http://courses.washington.edu/phys121/stuquest/dot.html)

@@ -51,11 +51,11 @@ For the purposes of the equation, we formalize our set of inputs-output pairs as
 Finding the maximum-margin hyperplane described by some line/plane $$P = \{\vec{x}\in \R^d \textit{ such that } \vec{w}^T \vec{x}=0\}$$ then becomes
 
 $$ 
-\underbrace{
+(\vec{w}^*, b^*)= \underbrace{
    \arg\max_{\vec{w}, b}\hspace{6} 
    \underbrace{
    \min_{i}
-       \frac{\left|\vec{w}^\intercal\vec{x}_i + b\right|} {\|\vec{w}\|}    
+       \frac{\left|\vec{w}^T\vec{x}_i + b\right|} {\|\vec{w}\|}    
    }_
    {
       \textup{distance to closest } \vec{x_i} \textup{ vector}
@@ -64,7 +64,7 @@ $$
 {
    \textup{Margin that maximimizes distances to vectors}
 } \textit{such that } \underbrace{
-\forall i, \ y_i(\vec{w}^\intercal\vec{x}_i+b)\geq1
+\forall i, \ y_i(\vec{w}^T\vec{x}_i+b)
 }_
 {\textup{The hyperplane is separating}
 }$$
@@ -72,13 +72,13 @@ $$
 The problem of finding which then boils down through some very nontrivial simplifications to
 
 $$ 
-\underbrace{
+(\vec{w}^*, b^*)= \underbrace{
    \arg\min_{\vec{w}} \|\vec{w}\|
 }_
 {
    \textup{Margin that maximimizes distances to vectors}
 } \textit{such that } \underbrace{
-\forall i, \ y_i(\vec{w}^\intercal\vec{x}_i+b)\geq1
+\forall i, \ y_i(\vec{w}^T\vec{x}_i+b)
 }_
 {\textup{The hyperplane is separating}
 }$$
@@ -92,28 +92,28 @@ Now, you might be asking at this point what the meaning of a margin even is if t
 
 ### Soft-Margin Hyperplane Equation
 $$\begin{align*}
-	(\g \vec{w}^*, b^*, \g \vec{\xi}^*) = \arg\min_{\g \vec{w}\in\R^d, b\in\R, \g \vec{\xi}\in\R^N} \ & \frac{1}{2} \|\g \vec{w}\|^2 + C\sum_{i=1}^N \xi_i \\
-					\mbox{s.t. }\ & y_i(\inner{\g \vec{w}^\intercal}{\g x_i} + b) \geq 1 - \xi_i , \quad i=1,\dots,N .\\
-					& \xi_i \geq 0
+	( \vec{w}^*, b^*,  \vec{\xi}^*) = \arg\min_{ \vec{w}\in\R^d, b\in\R,  \vec{\xi}\in\R^N} \ & \frac{1}{2} \| \vec{w}\|^2 + C\sum_{i=1}^N \xi_i \\
+					\mbox{s.t. }\ & y_i(\inner{ \vec{w}^T}{ x_i} + b) - \xi_i , \quad i=1,\dots,N .\\
+					& \xi_i
 \end{align*}$$
 
 Okay, so I lied a little bit by virtue of neglecting to mention ξ. However, letting *C* ≥ 0, you can ignore ξ (minor COVID-19 perk- I don't need to write this for you all on a whiteboard*) and convert this into
 
-$$\begin{align*}(\g \vec{w}^*, b^*) = 
+$$\begin{align*}(\vec{w}^*, b^*) = 
 \underbrace{
-   \arg\min_{\vec{w}\in\R^d, b\in\R} \frac{1}{2} \|\g \vec{w}\|^2
+   \arg\min_{\vec{w}\in\R^d, b\in\R} \frac{1}{2} \|\vec{w}\|^2
 }_{\textup{Maximizing margin}} \ + \ 
 C\underbrace{\sum_{i=1}^N \begin{array}{cc}
 \ 1-y_{i}(\mathbf{w}^T \mathbf{x}_{i}+b) & \textrm{ if $y_{i}(\mathbf{w}^T \mathbf{x}_{i}+b)<1$}\\
-0 & \textrm{ if $y_{i}(\mathbf{w}^T \mathbf{x}_{i}+b)\geq 1$}
+0 & \textrm{ if $y_{i}(\mathbf{w}^T \mathbf{x}_{i}+b)$}
 \end{array}}_{\textup{Penalization/loss due to errors}}
 \end{align*}$$
 
 Which then can be written as
 
-$$\begin{align*}(\g \vec{w}^*, b^*) \hspace{5}=\hspace{20} 
+$$\begin{align*}(\vec{w}^*, b^*) \hspace{5}=\hspace{20} 
 \underbrace{
-   \arg\min_{\vec{w}\in\R^d, b\in\R} \frac{1}{2} \|\g \vec{w}\|^2
+   \arg\min_{\vec{w}\in\R^d, b\in\R} \frac{1}{2} \| \vec{w}\|^2
 }_{\textup{Maximizing margin}} \hspace{30}+ 
 \ C\underbrace{\sum_{i=1}^N \max(1-y_{i}(\mathbf{w}^T \mathbf{x}_{i}+b),\ 0)
 }_{\textup{``Hinge loss'', penalization due to errors}}

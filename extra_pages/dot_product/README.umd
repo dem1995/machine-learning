@@ -1,12 +1,29 @@
-# Vector Dot Product
+---
+layout: default
+title: Vector Dot Product Intuition
+parent: Extra Pages
+nav_order: 1
+---
 
+### External Resources
+- [Interactive Dot Product Demo](https://www.geogebra.org/m/yqnsrnvs/) I've created an interactive demo for understanding the dot product better to accompany this page.
+
+# Vector Dot Product Intuition
+## Page Purpose
+This page is designed to give intuition to the vector dot product (written for vectors **u** and **v** as **u**⋅**v**, or effectively via matrix multiplication as **u**ᵀ**v** or as an inner product ⟨**u**, **v**⟩). The phrase
+
+"The dot product of **u** and **v** is just **the degree by which each are in the same direction, scaled by their actual lengths**."
+
+is the important takeaway here; the rest of the information on this page exists to clarify exactly why that is/ give examples and visual intuition.
+
+## Overview
 The dot product of **u** and **v** is given by
 
 $$\mathbf{u} \cdot \mathbf{v} = \textup{cos}(\theta_{\mathbf{u}, \mathbf{v}}) \left \| \mathbf{u} \right \| \left \| \mathbf{v} \right \|$$
 
 In other words, the dot product of **u** and **v** is just **the degree by which each are in the same direction, scaled by their actual lengths**.
 
-This, intuitively, ranges from 0 (when they are perpendicular) to **|u||v|** (when they are codirectional) to **--|u||v|** (when they are antidirectional).
+This, intuitively, ranges from 0 (when they are perpendicular) to **\|u\|\|v\|** (when they are codirectional) to **--\|u\|\|v\|** (when they are antidirectional).
 
 
 ### Via scalar projections

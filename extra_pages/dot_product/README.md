@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Vector Dot Product Intuition
-parent: Curriculum
+parent: Extra Pages
 nav_order: 1.5
 ---
 

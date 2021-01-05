@@ -12,5 +12,5 @@ nav_order: 1
 ### Probability Distributions
 ### Probability Mass & Density Functions
 ### Expected Values
-### Bayes's Theorem
+### Product Rule and Bayes's Theorem
 ## Part 2: Applications

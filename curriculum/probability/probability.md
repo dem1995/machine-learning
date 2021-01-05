@@ -20,8 +20,8 @@ Formally, we refer to tiny discrete outcomes as **samples**, and outcomes compos
 
 #### Example
 Imagine you're at a Subway (or some sandwich-shop you prefer) and are being asked to choose between various toppings. Let's suppose for the sake of example that this is a very limited sandwich shop, and you are asked to choose among cheese, lettuce, tomato, and turkey. In that case, 
-* Your set of samples, Ω, is `{cheese, lettuce, tomato, turkey}`
-* Your set of events is the set of sandwiches that can result from this - a cheese sandwich, a turkey-and-cheese sandwich, a cheese-lettuce-tomato-turkey sandwich, an empty sandwich, etc.
+* Your **set of samples, Ω**, is `{cheese, lettuce, tomato, turkey}`
+* Your **set of events, ℰ** is the set of sandwiches that can result from this - a cheese sandwich, a turkey-and-cheese sandwich, a cheese-lettuce-tomato-turkey sandwich, an empty sandwich, etc.
 ### Probability Distributions
 ### Probability Mass & Density Functions
 ### Expected Values

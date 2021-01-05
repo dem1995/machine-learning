@@ -11,5 +11,6 @@ nav_order: 2
 ### Example of a tree
 ### Probability
 ## Intuition - partitioning space
-## Curse of Dimensionality
+### Curse of Dimensionality
 ## Forests
+### Voting

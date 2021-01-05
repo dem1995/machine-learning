@@ -99,23 +99,23 @@ Now, you might be asking at this point what the meaning of a margin even is if t
 
 Okay, so I lied a little bit by virtue of neglecting to mention ξ. Each ξᵢ just represents to what degree it is that you're willing to be incorrect for your prediction for a given input vector xᵢ. However, by letting *C* ≥ 0, you can ignore ξ entirely (minor COVID-19 perk- I don't need to write this for you all on a whiteboard*) and convert this into
 
-<img src="https://i.upmath.me/svg/%5Cbegin%7Balign*%7D(%5Cvec%7Bw%7D%5E*%2C%20b%5E*)%20%3D%20%0A%5Cunderbrace%7B%0A%20%20%20%5Carg%5Cmin_%7B%5Cvec%7Bw%7D%5Cin%5CR%5Ed%2C%20b%5Cin%5CR%7D%20%5Cfrac%7B1%7D%7B2%7D%20%5C%7C%5Cvec%7Bw%7D%5C%7C%5E2%0A%7D_%7B%5Ctextup%7BMaximizing%20margin%7D%7D%20%5C%20%2B%20%5C%20%0AC%5Cunderbrace%7B%5Csum_%7Bi%3D1%7D%5EN%20%5Cbegin%7Barray%7D%7Bcc%7D%0A%5C%201-y_%7Bi%7D(%5Cmathbf%7Bw%7D%5ET%20%5Cmathbf%7Bx%7D_%7Bi%7D%2Bb)%20%26%20%5Ctextrm%7B%20if%20%24y_%7Bi%7D(%5Cmathbf%7Bw%7D%5ET%20%5Cmathbf%7Bx%7D_%7Bi%7D%2Bb)%3C1%24%7D%5C%5C%0A0%20%26%20%5Ctextrm%7B%20if%20%24y_%7Bi%7D(%5Cmathbf%7Bw%7D%5ET%20%5Cmathbf%7Bx%7D_%7Bi%7D%2Bb)%5Cgeq%201%24%7D%0A%5Cend%7Barray%7D%7D_%7B%5Ctextup%7BPenalization%2Floss%20due%20to%20errors%7D%7D%0A%5Cend%7Balign*%7D" alt="\begin{align*}(\vec{w}^*, b^*) = 
-\underbrace{
-   \arg\min_{\vec{w}\in\R^d, b\in\R} \frac{1}{2} \|\vec{w}\|^2
-}_{\textup{Maximizing margin}} \ + \ 
+<img src="https://i.upmath.me/svg/%5Cbegin%7Balign*%7D(%5Cvec%7Bw%7D%5E*%2C%20b%5E*)%20%5Chspace%7B5%7D%3D%5Chspace%7B5%7D%20%0A%5Carg%5Cmin_%7B%5Cvec%7Bw%7D%5Cin%5CR%5Ed%2C%20b%5Cin%5CR%7D%5Cunderbrace%7B%0A%20%20%20%5Cfrac%7B1%7D%7B2%7D%20%5C%7C%5Cvec%7Bw%7D%5C%7C%5E2%0A%7D_%7B%5Ctextup%7BMaximizing%20margin%7D%7D%20%5C%20%2B%20%5Chspace%7B5%7D%0AC%5Cunderbrace%7B%5Csum_%7Bi%3D1%7D%5EN%20%5Cbegin%7Barray%7D%7Bcc%7D%0A%5C%201-y_%7Bi%7D(%5Cvec%7Bw%7D%5ET%20%5Cvec%7Bx%7D_%7Bi%7D%2Bb)%20%26%20%5Ctextrm%7B%20if%20%24y_%7Bi%7D(%5Cvec%7Bw%7D%5ET%20%5Cvec%7Bx%7D_%7Bi%7D%2Bb)%3C1%24%7D%5C%5C%0A0%20%26%20%5Ctextrm%7B%20if%20%24y_%7Bi%7D(%5Cvec%7Bw%7D%5ET%20%5Cvec%7Bx%7D_%7Bi%7D%2Bb)%5Cgeq%201%24%7D%0A%5Cend%7Barray%7D%7D_%7B%5Ctextup%7BPenalization%2Floss%20due%20to%20errors%7D%7D%0A%5Cend%7Balign*%7D" alt="\begin{align*}(\vec{w}^*, b^*) \hspace{5}=\hspace{5} 
+\arg\min_{\vec{w}\in\R^d, b\in\R}\underbrace{
+   \frac{1}{2} \|\vec{w}\|^2
+}_{\textup{Maximizing margin}} \ + \hspace{5}
 C\underbrace{\sum_{i=1}^N \begin{array}{cc}
-\ 1-y_{i}(\mathbf{w}^T \mathbf{x}_{i}+b) &amp; \textrm{ if $y_{i}(\mathbf{w}^T \mathbf{x}_{i}+b)&lt;1$}\\
-0 &amp; \textrm{ if $y_{i}(\mathbf{w}^T \mathbf{x}_{i}+b)\geq 1$}
+\ 1-y_{i}(\vec{w}^T \vec{x}_{i}+b) &amp; \textrm{ if $y_{i}(\vec{w}^T \vec{x}_{i}+b)&lt;1$}\\
+0 &amp; \textrm{ if $y_{i}(\vec{w}^T \vec{x}_{i}+b)\geq 1$}
 \end{array}}_{\textup{Penalization/loss due to errors}}
 \end{align*}" />
 
 Which then can be written as
 
-<img src="https://i.upmath.me/svg/%5Cbegin%7Balign*%7D(%5Cvec%7Bw%7D%5E*%2C%20b%5E*)%20%5Chspace%7B5%7D%3D%5Chspace%7B20%7D%20%0A%5Cunderbrace%7B%0A%20%20%20%5Carg%5Cmin_%7B%5Cvec%7Bw%7D%5Cin%5CR%5Ed%2C%20b%5Cin%5CR%7D%20%5Cfrac%7B1%7D%7B2%7D%20%5C%7C%20%5Cvec%7Bw%7D%5C%7C%5E2%0A%7D_%7B%5Ctextup%7BMaximizing%20margin%7D%7D%20%5Chspace%7B30%7D%2B%20%0A%5C%20C%5Cunderbrace%7B%5Csum_%7Bi%3D1%7D%5EN%20%5Cmax(1-y_%7Bi%7D(%5Cmathbf%7Bw%7D%5ET%20%5Cmathbf%7Bx%7D_%7Bi%7D%2Bb)%2C%5C%200)%0A%7D_%7B%5Ctextup%7B%60%60Hinge%20loss''%2C%20penalization%20due%20to%20errors%7D%7D%0A%5Cend%7Balign*%7D" alt="\begin{align*}(\vec{w}^*, b^*) \hspace{5}=\hspace{20} 
-\underbrace{
-   \arg\min_{\vec{w}\in\R^d, b\in\R} \frac{1}{2} \| \vec{w}\|^2
-}_{\textup{Maximizing margin}} \hspace{30}+ 
-\ C\underbrace{\sum_{i=1}^N \max(1-y_{i}(\mathbf{w}^T \mathbf{x}_{i}+b),\ 0)
+<img src="https://i.upmath.me/svg/%5Cbegin%7Balign*%7D(%5Cvec%7Bw%7D%5E*%2C%20b%5E*)%20%5Chspace%7B5%7D%3D%5Chspace%7B8%7D%20%0A%5Carg%5Cmin_%7B%5Cvec%7Bw%7D%5Cin%5CR%5Ed%2C%20b%5Cin%5CR%7D%20%5Chspace%7B10%7D%20%20%5Cunderbrace%7B%0A%20%20%20%5Cfrac%7B1%7D%7B2%7D%20%5C%7C%20%5Cvec%7Bw%7D%5C%7C%5E2%0A%7D_%7B%5Ctextup%7BMaximizing%20margin%7D%7D%20%2B%5Chspace%7B15%7D%20%0A%5C%20C%5Cunderbrace%7B%5Csum_%7Bi%3D1%7D%5EN%20%5Cmax(1-y_%7Bi%7D(%5Cvec%7Bw%7D%5ET%20%5Cvec%7Bx%7D_%7Bi%7D%2Bb)%2C%5C%200)%0A%7D_%7B%5Ctextup%7B%60%60Hinge%20loss''%2C%20penalization%20due%20to%20errors%7D%7D%0A%5Cend%7Balign*%7D" alt="\begin{align*}(\vec{w}^*, b^*) \hspace{5}=\hspace{8} 
+\arg\min_{\vec{w}\in\R^d, b\in\R} \hspace{10}  \underbrace{
+   \frac{1}{2} \| \vec{w}\|^2
+}_{\textup{Maximizing margin}} +\hspace{15} 
+\ C\underbrace{\sum_{i=1}^N \max(1-y_{i}(\vec{w}^T \vec{x}_{i}+b),\ 0)
 }_{\textup{``Hinge loss'', penalization due to errors}}
 \end{align*}" />
 

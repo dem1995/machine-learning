@@ -11,6 +11,6 @@ nav_order: 1
 ### Samples and Events
 ### Probability Distributions
 ### Probability Mass & Density Functions
-### Bayes's Theorem
 ### Expected Values
+### Bayes's Theorem
 ## Part 2: Applications

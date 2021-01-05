@@ -30,7 +30,7 @@ In the previous example, the demonstrated line actually is the result of running
 
 ![separating boundary image](https://raw.githubusercontent.com/dem1995/algorithms/main/svms/separating_boundary_no_support_vectors_shown.png) ![nonoptimal separating boundaries image](https://raw.githubusercontent.com/dem1995/algorithms/main/svms/separating_boundaries_nonoptimal_v2.png)
 
-All of these green lines separate the vectors properly, and indeed could all be used to generate equations for determining the vectors. The line on the left, though, maximizes the distance to the closest sample in each class, and so **typically generalizes best to out-of-sample data**. 
+All of these green lines separate the vectors properly, and indeed could all be used to generate equations for determining the vectors's labels. The line on the left, though, maximizes the distance to the closest sample in each class, and so **typically generalizes best to out-of-sample data**. 
 
 Sure, we could have some wonky underlying distribution, such as where the circles actually appear really close to the squares (or even within the cavity of the squares), but with the information we _know_ (i.e. our collection of samples) additional justification would be needed for choosing anything but this line.
 
@@ -48,7 +48,7 @@ $$\textup{Line/plane with greatest distance to datapoints} \textit{ that} \textu
 
 For the purposes of the equation, we formalize our set of inputs-output pairs as $$\{(\vec{x}_i, y_i)\}$$, where $$\vec{x_i}\in \R^d$$ and (giving the output labels values of -1 and 1 for the sake of computation) $$y\in\{-1, 1\}$$. 
 
-Finding the maximum-margin hyperplane described by some line/plane $$P = \{\vec{x}\in \R^d \textit{ such that } \vec{w}^T \vec{x}=0\}$$ then becomes
+Finding the maximum-margin hyperplane described by some line/plane $$P = \{\vec{x}\in \R^d \textit{ such that } \vec{w}^T \vec{x} + b=0\}$$ then becomes
 
 $$ 
 (\vec{w}^*, b^*)= \underbrace{
@@ -64,7 +64,7 @@ $$
 {
    \textup{Margin that maximimizes distances to vectors}
 } \textit{such that } \underbrace{
-\forall i, \ y_i(\vec{w}^T\vec{x}_i+b)
+\forall i, \ y_i(\vec{w}^T\vec{x}_i+b) \geq 0
 }_
 {\textup{The hyperplane is separating}
 }$$
@@ -78,7 +78,7 @@ $$
 {
    \textup{Margin that maximimizes distances to vectors}
 } \textit{such that } \underbrace{
-\forall i, \ y_i(\vec{w}^T\vec{x}_i+b)
+\forall i, \ y_i(\vec{w}^T\vec{x}_i+b) \geq 0
 }_
 {\textup{The hyperplane is separating}
 }$$
@@ -93,11 +93,11 @@ Now, you might be asking at this point what the meaning of a margin even is if t
 ### Soft-Margin Hyperplane Equation
 $$\begin{align*}
 	( \vec{w}^*, b^*,  \vec{\xi}^*) = \arg\min_{ \vec{w}\in\R^d, b\in\R,  \vec{\xi}\in\R^N} \ & \frac{1}{2} \| \vec{w}\|^2 + C\sum_{i=1}^N \xi_i \\
-					\mbox{s.t. }\ & y_i(\inner{ \vec{w}^T}{ x_i} + b) - \xi_i , \quad i=1,\dots,N .\\
-					& \xi_i
+					\mbox{s.t. }\ & y_i(\inner{ \vec{w}^T}{ x_i} + b) + \xi_i \geq 1, \quad i=1,\dots,N .\\
+					&  \textup{(all } \xi_i\textup{ being nonnegative)}
 \end{align*}$$
 
-Okay, so I lied a little bit by virtue of neglecting to mention ξ. However, letting *C* ≥ 0, you can ignore ξ (minor COVID-19 perk- I don't need to write this for you all on a whiteboard*) and convert this into
+Okay, so I lied a little bit by virtue of neglecting to mention ξ. Each ξᵢ just represents to what degree it is that you're willing to be incorrect for your prediction for a given input vector xᵢ. However, by letting *C* ≥ 0, you can ignore ξ entirely (minor COVID-19 perk- I don't need to write this for you all on a whiteboard*) and convert this into
 
 $$\begin{align*}(\vec{w}^*, b^*) = 
 \underbrace{
@@ -105,7 +105,7 @@ $$\begin{align*}(\vec{w}^*, b^*) =
 }_{\textup{Maximizing margin}} \ + \ 
 C\underbrace{\sum_{i=1}^N \begin{array}{cc}
 \ 1-y_{i}(\mathbf{w}^T \mathbf{x}_{i}+b) & \textrm{ if $y_{i}(\mathbf{w}^T \mathbf{x}_{i}+b)<1$}\\
-0 & \textrm{ if $y_{i}(\mathbf{w}^T \mathbf{x}_{i}+b)$}
+0 & \textrm{ if $y_{i}(\mathbf{w}^T \mathbf{x}_{i}+b)\geq 1$}
 \end{array}}_{\textup{Penalization/loss due to errors}}
 \end{align*}$$
 

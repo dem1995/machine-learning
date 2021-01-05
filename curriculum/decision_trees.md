@@ -14,3 +14,4 @@ nav_order: 2
 ### Curse of Dimensionality
 ## Forests
 ### Voting
+## Random Forest Classifiers

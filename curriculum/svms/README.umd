@@ -99,23 +99,23 @@ $$\begin{align*}
 
 Okay, so I lied a little bit by virtue of neglecting to mention ξ. Each ξᵢ just represents to what degree it is that you're willing to be incorrect for your prediction for a given input vector xᵢ. However, by letting *C* ≥ 0, you can ignore ξ entirely (minor COVID-19 perk- I don't need to write this for you all on a whiteboard*) and convert this into
 
-$$\begin{align*}(\vec{w}^*, b^*) = 
-\underbrace{
-   \arg\min_{\vec{w}\in\R^d, b\in\R} \frac{1}{2} \|\vec{w}\|^2
-}_{\textup{Maximizing margin}} \ + \ 
+$$\begin{align*}(\vec{w}^*, b^*) \hspace{5}=\hspace{5} 
+\arg\min_{\vec{w}\in\R^d, b\in\R}\underbrace{
+   \frac{1}{2} \|\vec{w}\|^2
+}_{\textup{Maximizing margin}} \ + \hspace{5}
 C\underbrace{\sum_{i=1}^N \begin{array}{cc}
-\ 1-y_{i}(\mathbf{w}^T \mathbf{x}_{i}+b) & \textrm{ if $y_{i}(\mathbf{w}^T \mathbf{x}_{i}+b)<1$}\\
-0 & \textrm{ if $y_{i}(\mathbf{w}^T \mathbf{x}_{i}+b)\geq 1$}
+\ 1-y_{i}(\vec{w}^T \vec{x}_{i}+b) & \textrm{ if $y_{i}(\vec{w}^T \vec{x}_{i}+b)<1$}\\
+0 & \textrm{ if $y_{i}(\vec{w}^T \vec{x}_{i}+b)\geq 1$}
 \end{array}}_{\textup{Penalization/loss due to errors}}
 \end{align*}$$
 
 Which then can be written as
 
-$$\begin{align*}(\vec{w}^*, b^*) \hspace{5}=\hspace{20} 
-\underbrace{
-   \arg\min_{\vec{w}\in\R^d, b\in\R} \frac{1}{2} \| \vec{w}\|^2
-}_{\textup{Maximizing margin}} \hspace{30}+ 
-\ C\underbrace{\sum_{i=1}^N \max(1-y_{i}(\mathbf{w}^T \mathbf{x}_{i}+b),\ 0)
+$$\begin{align*}(\vec{w}^*, b^*) \hspace{5}=\hspace{8} 
+\arg\min_{\vec{w}\in\R^d, b\in\R} \hspace{10}  \underbrace{
+   \frac{1}{2} \| \vec{w}\|^2
+}_{\textup{Maximizing margin}} +\hspace{15} 
+\ C\underbrace{\sum_{i=1}^N \max(1-y_{i}(\vec{w}^T \vec{x}_{i}+b),\ 0)
 }_{\textup{``Hinge loss'', penalization due to errors}}
 \end{align*}$$
 

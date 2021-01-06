@@ -28,7 +28,7 @@ A space (Ω, ℰ) is known as a **measurable space**.
 
 #### Example 2: Electric (Burnout) Boogaloo
 
-Suppose we are owners of a "Braum's Ice Cream" shop (a popular chain in Norman, Oklahoma in the US), and we have a large neon sign in front of our store.
+Suppose we are owners of a "Braum's Ice Cream" shop (a popular chain in Oklahoma, USA), and we have a large neon sign in front of our store.
 
 ![Neon "Braum's Ice Cream" sign. The letters B R A U M and S are lit up](braums_correct.jpg "Lit-up Braum's Ice Cream Sign"){:height="200px"}.
 

@@ -81,14 +81,33 @@ Consider our six-sided die from earlier, where the sample space is Ω = `{1, 2,
 
 Using, this, if we wanted to find the probability of rolling an odd number, we could do P({1, 6}) = p(1) + p(6) = 1/6 + 1/6 = 2/3.
 
-This generalizes to more complicated s - in the eveutations in the event there was some more complicated underlying distribution, like if someone was cheating with a weighted die, we could also use a PMF to model that.
+This generalizes to more complicated situations- in the event there was some more complicated underlying distribution, like if someone was cheating with a weighted die, we could also use a PMF to model that.
 
 #### Probability Density Functions
 For a continuous sample space Ω, a PMF is a function <img src="https://i.upmath.me/svg/p%3A%5COmega%20%5Cto%20%5B0%2C%201%5D" alt="p:\Omega \to [0, 1]" /> that satisfies
 
 <img src="https://i.upmath.me/svg/%5Cdisplaystyle%5Cint_%7B%5Comega%5Cin%20%5COmega%7D%7Bp(%5Comega)%7D%3D1" alt="\displaystyle\int_{\omega\in \Omega}{p(\omega)}=1" />
 
+### Random Variables
+Frequently, you will see <img src="https://i.upmath.me/svg/P(X%3Dx)" alt="P(X=x)" /> or the like. The _X_ is in this case is what's known as a **random variable**. Random variables are 'variables' that take on values in the sample space with some underlying distribution. <img src="https://i.upmath.me/svg/P(X%3D%5Ctextup%7Bwhatever%7D)" alt="P(X=\textup{whatever})" /> just asks what the probability is that _X_ will take on the value/satisfies `whatever`.
+
+For example, in the case of a fair die I might have a random variable <img src="https://i.upmath.me/svg/X" alt="X" /> that samples from Ω=`{ 1, 2, 3, 4, 5, 6 }` with equal probability. In that case, X is a random variable sampling from a uniform distribution over the sample space, and <img src="https://i.upmath.me/svg/P(X%3D1)%3D%5Cfrac%7B1%7D%7B6%7D" alt="P(X=1)=\frac{1}{6}" />.
+
+As a formal note, random variables are technically transformative functions, which is why, for example, <img src="https://i.upmath.me/svg/P(X%3D%5Ctextup%7Beven%7D)%3D%5Cfrac%7B1%7D%7B2%7D" alt="P(X=\textup{even})=\frac{1}{2}" /> is also valid. However, in practice we do not think of underlying functions when working with random variables, and just think of them as variables that satisfy properties/match values.
+
 ### Expected Values
+The **expected value** <img src="https://i.upmath.me/svg/%5Cmathbb%7BE%7D(X)" alt="\mathbb{E}(X)" /> of a random variable _X_ is the mean/average of repeatedly sampling _X_. In the case of _X_ representing our fair die roll, <img src="https://i.upmath.me/svg/%5Cmathbb%7BE%7D(X)%3D3.5" alt="\mathbb{E}(X)=3.5" />.
+
+More generally, the expected value of a random variable is given by the following equations:
+
+<img src="https://i.upmath.me/svg/%5Cmathbb%7BE%7D(X)%3D%0A%5Cbegin%7Bcases%7D%0A%20%20%20%20%5Cdisplaystyle%20%5Csum_%7Bx%20%5Cin%20%5COmega%7D%20x%20p(x)%2C%26%20%5Ctext%7Bif%20%7D%20X%20%5Ctext%7B%20is%20sampled%20from%20a%20discrete%20space%7D%5C%5C%0A%20%20%20%20%5Cdisplaystyle%20%5Cint_%7Bx%20%5Cin%20%5COmega%7D%20x%20p(x)%2C%20%20%20%20%20%20%20%20%20%20%20%20%20%20%26%20%5Ctext%7Bif%20%7D%20X%20%5Ctext%7B%20is%20sampled%20from%20a%20continuous%20space%7D%0A%5Cend%7Bcases%7D" alt="\mathbb{E}(X)=
+\begin{cases}
+    \displaystyle \sum_{x \in \Omega} x p(x),&amp; \text{if } X \text{ is sampled from a discrete space}\\
+    \displaystyle \int_{x \in \Omega} x p(x),              &amp; \text{if } X \text{ is sampled from a continuous space}
+\end{cases}" />
+
+In other words, it's the result of adding up each of the samples by their weight of occurrence.
+
 ### Independence and Effective Independence
 ### Product Rule and Bayes's Theorem
 ## Part 2: Applications

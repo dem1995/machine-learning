@@ -38,7 +38,7 @@ If we consider the outcomes of our lights going out, we have a sample space Ω=
 
 ![Neon "Braum's Ice Cream" sign. The letters B R and A are lit up](braums_incorrect.jpg "Lit-up Braum's Ice Cream Sign fail"){:height="200px" width="200px"}
 
-Exercise: briefly think through what the sample space/event space would be for the lights of a a Snap Fitness™ location (and what events you might want to avoid if you were responsible for it).
+**Exercise**: briefly think through what the sample space/event space would be for the lights of a a Snap Fitness™ location (and what events you might want to avoid if you were responsible for it).
 
 ![Neon "Snap Fitness" sign. The letters N A and P are lit up, followed by "Fitness"](nap_fitness.png "Lit-up Snap Fitness Sign fail"){:height="200px" width="200px"}
 
@@ -92,7 +92,7 @@ Suppose you have a random number generator that outputs numbers between 10 and 5
 
 <img src="https://i.upmath.me/svg/p(%5Comega)%3D%5Cfrac%7B1%7D%7B40%7D" alt="p(\omega)=\frac{1}{40}" />
 
-Exercise: Considering what you know about how a PDF works, see if you can derive the continuous and discrete distributions for arbitrary starting and ending values for the sample space.
+**Exercise**: Considering what you know about how a PDF works, see if you can derive the continuous and discrete distributions for arbitrary starting and ending values for the sample space.
 
 #### Using PDFs and PMFs
 PDFs and PMFs can be used for a variety of purposes, including finding the probability of an event occurring and finding the mean value for a distribution.

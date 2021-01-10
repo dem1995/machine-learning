@@ -64,7 +64,7 @@ You might imagine that a really good player (who didn't aim for the center) woul
 
 
 ### Probability Mass & Density Functions
-Probability distributions themselves are a bit daunting to consider directly - it can be useful to be able to fall back on their technical sense, but that same  sense is unwieldy to work with. **Fortunately, we can instead obtain probability distributions by simply defining them in terms of _probability density functions_ and _probability mass functions_**.
+Probability distributions themselves are a bit daunting to consider directly - it can be useful to be able to fall back on their technical sense, but that same sense is unwieldy to work with. **Fortunately, we can instead obtain probability distributions by simply defining them in terms of _probability density functions_ and _probability mass functions_**.
 
 Probability mass/density functions rely on defining a density value at each point in the sample space - probabilities of items in the event space are then the sum/integral of their constituent samples. It's worth noting that PMFs and PDFs don't necessarily produce probabilities (although for spaces of finite size (cardinality) they do).
 
@@ -114,7 +114,7 @@ For example, in the case of a fair die I might have a random variable <img src="
 
 As a formal note, random variables are technically transformative functions, which is why, for example, <img src="https://i.upmath.me/svg/P(X%3D%5Ctextup%7Beven%7D)%3D%5Cfrac%7B1%7D%7B2%7D" alt="P(X=\textup{even})=\frac{1}{2}" /> is also valid. However, in practice we do not think of underlying functions when working with random variables, and just think of them as variables that satisfy properties/match values.
 
-#### Expected Values and Correlation
+### Expected Values and Correlation
 The **expected value** <img src="https://i.upmath.me/svg/%5Cmathbb%7BE%7D(X)" alt="\mathbb{E}(X)" /> of a random variable _X_ is the mean/average of repeatedly sampling _X_. In the case of _X_ representing our fair die roll, <img src="https://i.upmath.me/svg/%5Cmathbb%7BE%7D(X)%3D3.5" alt="\mathbb{E}(X)=3.5" />.
 
 More generally, the expected value of a random variable is given by the following equations:
@@ -127,7 +127,7 @@ More generally, the expected value of a random variable is given by the followin
 
 In other words, the expected value is the result of adding up each of the samples by their weight of occurrence.
 
-#### Independence and the Product Rule
+### Independence and the Product Rule
 First and foremost, if _X_ and _Y_ are random variables, their **joint probability** is the probability that both result in specific events. The joint probability that _X_ results in outcome _x_ and _Y_ results in outcome _y_ is written as <img src="https://i.upmath.me/svg/P(X%3Dx%2C%20Y%3Dy)" alt="P(X=x, Y=y)" /> or <img src="https://i.upmath.me/svg/p(x%2C%20y)" alt="p(x, y)" />.
 
 Two random variables _X_ and _Y_ are **independent** if their outcomes do not depend on each other in any way. If _X_ and _Y_ are independent variables, then their _joint probability_ is just the product of the individual probabilities, i.e. 
@@ -136,8 +136,8 @@ Two random variables _X_ and _Y_ are **independent** if their outcomes do not de
 
 which is known as the **product rule for independent random variables**.
 
-#### Conditional Probability
-For two random variables _X_ and _Y_ sampling from event spaces <img src="https://i.upmath.me/svg/%5Cmathcal%20X" alt="\mathcal X" /> and <img src="https://i.upmath.me/svg/%5Cmathcal%20Y" alt="\mathcal Y" />, the **conditional probability** of an event <img src="https://i.upmath.me/svg/x%5Cin%20%5Cmathcal%20X" alt="x\in \mathcal X" /> occurring on an event <img src="https://i.upmath.me/svg/y%20%5Cin%20%5Cmathcal%20Y" alt="y \in \mathcal Y" /> occurring is written as either <img src="https://i.upmath.me/svg/P(X%3Dx%20%7C%20Y%3Dy)" alt="P(X=x | Y=y)" /> or <img src="https://i.upmath.me/svg/p(x%7Cy)" alt="p(x|y)" />.
+### Conditional Probability
+For two random variables _X_ and _Y_ sampling from event spaces <img src="https://i.upmath.me/svg/%5Cmathcal%20X" alt="\mathcal X" /> and <img src="https://i.upmath.me/svg/%5Cmathcal%20Y" alt="\mathcal Y" />, the **conditional probability** of an event <img src="https://i.upmath.me/svg/x%5Cin%20%5Cmathcal%20X" alt="x\in \mathcal X" /> occurring on an event <img src="https://i.upmath.me/svg/y%20%5Cin%20%5Cmathcal%20Y" alt="y \in \mathcal Y" /> occurring is written as either <img src="https://i.upmath.me/svg/P(X%3Dx%20%7C%20Y%3Dy)" alt="P(X=x | Y=y)" /> or <img src="https://i.upmath.me/svg/p(x%7Cy)" alt="p(x|y)" />
 
 The basic idea is to ask "if we know that y occurred, what is the probability that x will occur?". The equation for this is 
 

@@ -66,8 +66,7 @@ You might imagine that a really good player (who didn't aim for the center) woul
 ### Probability Mass & Density Functions
 Probability distributions themselves are a bit daunting to consider directly - it can be useful to be able to fall back on their technical sense, but that same  sense is unwieldy to work with. **Fortunately, we can instead obtain probability distributions by simply defining them in terms of _probability density functions_ and _probability mass functions_**.
 
-Probability mass/density functions rely on defining a density value at each point in the sample space - probabilities of items in the event space are then the sum/integral of their constituent samples. It's worth noting that PMFs and PDFs don't necessarily produce probabilities - they can produce values >1, for example.
-
+Probability mass/density functions rely on defining a density value at each point in the sample space - probabilities of items in the event space are then the sum/integral of their constituent samples. It's worth noting that PMFs and PDFs don't necessarily produce probabilities (although for spaces of finite size (cardinality) they do).
 
 #### Probability Mass Functions
 For a discrete sample space Ω, a PMF is a function <img src="https://i.upmath.me/svg/p%3A%5COmega%20%5Cto%20%5B0%2C%201%5D" alt="p:\Omega \to [0, 1]" /> that satisfies
@@ -79,7 +78,7 @@ Consider our six-sided die from earlier, where the sample space is Ω = `{1, 2,
 
 <img src="https://i.upmath.me/svg/p(%5Comega)%20%3D%20%5Cfrac%7B1%7D%7B6%7D" alt="p(\omega) = \frac{1}{6}" />
 
-Using, this, if we wanted to find the probability of rolling an odd number, we could do P({1, 6}) = p(1) + p(6) = 1/6 + 1/6 = 2/3.
+Using, this, if we wanted to find the probability of rolling an odd number, we could do P({1, 6}) = p(1) + p(6) = 1/6 + 1/6 = 2/3. The distribution defined by this PDF is known as the _discrete uniform distribution_.
 
 This generalizes to more complicated situations- in the event there was some more complicated underlying distribution, like if someone was cheating with a weighted die, we could also use a PMF to model that.
 
@@ -87,6 +86,26 @@ This generalizes to more complicated situations- in the event there was some mor
 For a continuous sample space Ω, a PMF is a function <img src="https://i.upmath.me/svg/p%3A%5COmega%20%5Cto%20%5B0%2C%201%5D" alt="p:\Omega \to [0, 1]" /> that satisfies
 
 <img src="https://i.upmath.me/svg/%5Cdisplaystyle%5Cint_%7B%5Comega%5Cin%20%5COmega%7D%7Bp(%5Comega)%7D%3D1" alt="\displaystyle\int_{\omega\in \Omega}{p(\omega)}=1" />
+
+#### PDF Example
+Suppose you have a random number generator that outputs numbers between 10 and 50, inclusive, with equal probability. The distribution here is known as the *continuous uniform distribution*, and the equation governing its PDF is given by
+
+<img src="https://i.upmath.me/svg/p(%5Comega)%3D%5Cfrac%7B1%7D%7B40%7D" alt="p(\omega)=\frac{1}{40}" />
+
+Exercise: Considering what you know about how a PDF works, see if you can derive the continuous and discrete distributions for arbitrary starting and ending values for the sample space.
+
+#### Using PDFs and PMFs
+PDFs and PMFs can be used for a variety of purposes, including finding the probability of an event occurring and finding the mean value for a distribution.
+
+Using our previous uniform RNG example, <img src="https://i.upmath.me/svg/P(15%20%5Cleq%20X%20%5Cleq%2020)" alt="P(15 \leq X \leq 20)" />, for example, is
+
+<img src="https://i.upmath.me/svg/%5Cdisplaystyle%5Cint_%7B15%7D%5E%7B20%7Dp(x)%5C%20dx%20%3D%20%0A%5Cleft%5B%5Cfrac%7Bx%7D%7B40%7D%5Cright%5D_%7B15%7D%5E%7B20%7D%20%3D%20%5Cfrac%7B5%7D%7B40%7D" alt="\displaystyle\int_{15}^{20}p(x)\ dx = 
+\left[\frac{x}{40}\right]_{15}^{20} = \frac{5}{40}" />
+
+And the average (mean) value for the the whole distribution is
+
+<img src="https://i.upmath.me/svg/%5Cdisplaystyle%5Cint_%7B10%7D%5E%7B50%7Dx%5Ccdot%20p(x)%5C%20dx%20%3D%20%0A%5Cleft%5B%5Cfrac%7Bx%5E2%7D%7B80%7D%5Cright%5D_%7B10%7D%5E%7B50%7D%20%3D%2030" alt="\displaystyle\int_{10}^{50}x\cdot p(x)\ dx = 
+\left[\frac{x^2}{80}\right]_{10}^{50} = 30" />
 
 ### Random Variables
 Frequently, you will see <img src="https://i.upmath.me/svg/P(X%3Dx)" alt="P(X=x)" /> or the like. The _X_ is in this case is what's known as a **random variable**. Random variables are 'variables' that take on values in the sample space with some underlying distribution. <img src="https://i.upmath.me/svg/P(X%3D%5Ctextup%7Bwhatever%7D)" alt="P(X=\textup{whatever})" /> just asks what the probability is that _X_ will take on the value/satisfies `whatever`.
@@ -106,7 +125,7 @@ More generally, the expected value of a random variable is given by the followin
     \displaystyle \int_{x \in \Omega} x p(x),              &amp; \text{if } X \text{ is sampled from a continuous space}
 \end{cases}" />
 
-In other words, it's the result of adding up each of the samples by their weight of occurrence.
+In other words, the expected value is the result of adding up each of the samples by their weight of occurrence.
 
 ### Independence and Effective Independence
 ### Product Rule and Bayes's Theorem

@@ -31,15 +31,15 @@ A space (Ω, ℰ) is known as a **measurable space**.
 
 Suppose we are owners of a "Braum's Ice Cream" shop (a popular chain in Oklahoma, USA), and we have a large neon sign in front of our store.
 
-![Neon "Braum's Ice Cream" sign. The letters B R A U M and S are lit up](braums_correct.jpg "Lit-up Braum's Ice Cream Sign"){:height="200px" width="200px"}
+![Neon "Braum's Ice Cream" sign. The letters B R A U M and S are lit up](braums_correct.jpg "Lit-up Braum's Ice Cream Sign"){:height="200px" width="200px" .center-image}
 
 If we consider the outcomes of our lights going out, we have a sample space Ω=`{B R A U M S}`, with each letter corresponding to the light going out. Our events would then be which collection of lights go out - naturally, for example, if we have the event A=`{R A U M S}`, we just have 'B Ice Cream and Dairy Store'. There are certain events we naturally want to avoid - for example, the event A=`{B A M S} = {R U M}ᶜ` - the event where the letters B, A, M, and S go out, or the *complement* of the event where R, U, and M go out - would just leave us with 'RUM Ice Cream and Dairy Store'. A similar unfortunate event is given below.
 
-![Neon "Braum's Ice Cream" sign. The letters B R and A are lit up](braums_incorrect.jpg "Lit-up Braum's Ice Cream Sign fail"){:height="200px" width="200px"}
+![Neon "Braum's Ice Cream" sign. The letters B R and A are lit up](braums_incorrect.jpg "Lit-up Braum's Ice Cream Sign fail"){:height="200px" width="200px"  .center-image}
 
 **Exercise**: briefly think through what the sample space/event space would be for the lights of a a Snap Fitness™ location (and what events you might want to avoid if you were responsible for it).
 
-![Neon "Snap Fitness" sign. The letters N A and P are lit up, followed by "Fitness"](nap_fitness.png "Lit-up Snap Fitness Sign fail"){:height="200px" width="200px"}
+![Neon "Snap Fitness" sign. The letters N A and P are lit up, followed by "Fitness"](nap_fitness.png "Lit-up Snap Fitness Sign fail"){:height="200px" width="200px" .center-image}
 
 ## Probability Distributions
 Another example of having an event space is that it allows us to derive probabity distributions. A **probability distribution** is, formally, a function P:ℰ⟶\[0, 1\] from events to the range 0-1 inclusive if
@@ -57,7 +57,7 @@ These properties can be readily used to derive other facts about probability dis
 ### Continuous Example
 Consider modelling the probabilities of the angle of a dart thrown against a dartboard. The sample space is the continuous interval Ω = [0, 360] (which is an infinite set). The event space for continuous sets is more complicated than what we've discussed (it's not simply the power set of Ω - it's a subset of that), but for this example, it's the collections of continuous intervals you can form of angles on a dartboard - so, for example, A=`[0, 90]`∈ℰ would be a quarter of the dartboard, as would A=`[330, 60]`∈ℰ.
 
-![Dartboard with some angles highlighted. Specifically, dartboards are split up into radial pieces, and the highest-scoring radial piece extends from the center to the top of the board, bordered by lines along the angles 261 degrees and 279 degrees (the 18 degree sector centered on the line extending from the center to the top of the board)](dartboard.png "Dartboard picture"){:height="200px" width="200px"}
+![Dartboard with some angles highlighted. Specifically, dartboards are split up into radial pieces, and the highest-scoring radial piece extends from the center to the top of the board, bordered by lines along the angles 261 degrees and 279 degrees (the 18 degree sector centered on the line extending from the center to the top of the board)](dartboard.png "Dartboard picture"){:height="200px" width="200px" .center-image}
 
 You might imagine that a really good player (who didn't aim for the center) would have a probability distribution that had higher values for intervals between 261 degrees and 279 degrees. Unlike in the discrete case, deriving a probability distribution _P_ here is tricky, as we  Naturally, describing this probability distribution might be a bit tricky- we have have to define outputs for the intervals in the sample space! -  thankfully, as we shall see, we don't need to focus overmuch on the formal definition of a probability distribution to effectively define one.
 

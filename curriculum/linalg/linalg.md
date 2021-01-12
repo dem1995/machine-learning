@@ -49,7 +49,7 @@ $$\vec{v}=\begin{bmatrix}
  
 Now, suppose you wanted to convert this into metric measurements (because the units are easier and/or you aren't in upper North America). You could accomplish this with the following expression:
 
-$$\text{metricized\ }\vec{v} = \begin{bmatrix}
+$$\text{metricized }\vec{v} = \begin{bmatrix}
 250 \frac{\text{ml}}{\text{cup}} \cdot 10 \text{ cups of dough}\\
 250 \frac{\text{ml}}{\text{cup}} \cdot 2\text{ cups of chocolate chips}\\
 \end{bmatrix}=\begin{bmatrix}
@@ -63,7 +63,7 @@ By using the transformation $$\mathbf{M}_1=\begin{bmatrix}
 \end{bmatrix}$$, you can achieve the same result via
 
 $$\begin{align*}
-\text{metricized\ }\vec{v} &= \mathbf{M}_1 \vec{v} \\
+\text{metricized }\vec{v} &= \mathbf{M}_1 \vec{v} \\
 &=\begin{bmatrix}
 250 \frac{\text{ml}}{\text{cup}} & 0\\
 0  & 250 \frac{\text{ml}}{\text{cup}}\\ 

@@ -2,6 +2,7 @@
 layout: default
 title: Linear Algebra
 parent: Curriculum
+mathjax: true
 nav_order: 1.5
 ---
 

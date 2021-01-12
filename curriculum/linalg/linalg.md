@@ -2,7 +2,6 @@
 layout: default
 title: Linear Algebra
 parent: Curriculum
-mathjax: true
 nav_order: 1.5
 ---
 
@@ -43,36 +42,36 @@ or, as a further visual,
 Now, suppose we're dealing with chocolate-chip cookies, and we want to encode information about the chocolate chips and cookie dough used. We might care about the volume, that is, how many Commonwealth cups\* of each we have. Suppose in our last batch of cookies we used 10 cups of dough and 2 cups of chocolate-chip cookies. We might represent this, then, as
 
 $$\vec{v}=\begin{bmatrix}
-10 \textup{ cups of dough} \\
-2 \textup{ cups of chocolate chips} \\
+10 \text{ cups of dough} \\
+2 \text{ cups of chocolate chips} \\
 \end{bmatrix}$$
  
 Now, suppose you wanted to convert this into metric measurements (because the units are easier and/or you aren't in upper North America). You could accomplish this with the following expression:
 
-$$\textup{metricized\ }\vec{v} = \begin{bmatrix}
-250 \frac{\textup{ml}}{\textup{cup}} \cdot 10 \textup{ cups of dough}\\
-250 \frac{\textup{ml}}{\textup{cup}} \cdot 2\textup{ cups of chocolate chips}\\
+$$\text{metricized\ }\vec{v} = \begin{bmatrix}
+250 \frac{\text{ml}}{\text{cup}} \cdot 10 \text{ cups of dough}\\
+250 \frac{\text{ml}}{\text{cup}} \cdot 2\text{ cups of chocolate chips}\\
 \end{bmatrix}=\begin{bmatrix}
-2500 \textup{ ml of dough}\\
-500 \textup{ ml of chocolate chips}\\
+2500 \text{ ml of dough}\\
+500 \text{ ml of chocolate chips}\\
 \end{bmatrix}$$
 
 By using the transformation $$\mathbf{M}_1=\begin{bmatrix}
-250 \frac{\textup{ml}}{\textup{cup}} & 0\\
-0  & 250 \frac{\textup{ml}}{\textup{cup}}\\ 
+250 \frac{\text{ml}}{\text{cup}} & 0\\
+0  & 250 \frac{\text{ml}}{\text{cup}}\\ 
 \end{bmatrix}$$, you can achieve the same result via
 
 $$\begin{align*}
-\textup{metricized\ }\vec{v} &= \mathbf{M}_1 \vec{v} \\
+\text{metricized\ }\vec{v} &= \mathbf{M}_1 \vec{v} \\
 &=\begin{bmatrix}
-250 \frac{\textup{ml}}{\textup{cup}} & 0\\
-0  & 250 \frac{\textup{ml}}{\textup{cup}}\\ 
+250 \frac{\text{ml}}{\text{cup}} & 0\\
+0  & 250 \frac{\text{ml}}{\text{cup}}\\ 
 \end{bmatrix}\begin{bmatrix}
-10 \textup{ ml of dough}\\
-2 \textup{ ml of chocolate chips}\\
+10 \text{ ml of dough}\\
+2 \text{ ml of chocolate chips}\\
 \end{bmatrix}=\begin{bmatrix}
-2500 \textup{ ml of dough}\\
-500 \textup{ ml of chocolate chips}\\
+2500 \text{ ml of dough}\\
+500 \text{ ml of chocolate chips}\\
 \end{bmatrix}
 \end{align}$$
 
@@ -80,9 +79,9 @@ In this way, we can transform data with matrices. You might notice that we trans
 
 Suppose Darcy only wants cookies where there is at least > 10% chocolate chips by volume prior to baking, and the more chocolate chips, the better (they are a chocolate chip fanatic). We might come up with a "Darcy score", $$D(\vec{x})$$ that takes in a chocolate chip cookie composition and outputs how much Darcy likes it. In this case, if we wanted positive scores to be "cookies Darcy likes", we could go through the process of
 
-$$\textup{need } \vec{x}_{chocolate} > 0.1(\vec{x}_{chocolate} + \vec{x}_{dough}) \\
-  \Rightarrow\textup{need } \vec{x}_{chocolate} - 0.1(\vec{x}_{chocolate} + \vec{x}_{dough}) > 0 \\
-  \Rightarrow\textup{need } 0.9\vec{x}_{chocolate} - 0.1\vec{x}_{dough}>0$$
+$$\text{need } \vec{x}_{chocolate} > 0.1(\vec{x}_{chocolate} + \vec{x}_{dough}) \\
+  \Rightarrow\text{need } \vec{x}_{chocolate} - 0.1(\vec{x}_{chocolate} + \vec{x}_{dough}) > 0 \\
+  \Rightarrow\text{need } 0.9\vec{x}_{chocolate} - 0.1\vec{x}_{dough}>0$$
 
 To obtain a Darcy Chocolate Chip Cookie score(TM) of
 
@@ -138,7 +137,7 @@ What if Gauss's house is in the sky at $$\begin{bmatrix} 0 & 0 & 20 \end{bmatrix
 
 Given a set of vectors $$v_1, v_2, ...$$, the set of points/vectors you can reach through linear combinations is known as the _span_ of $$v_1, v_2, ...$$. More formally, the span of vectors $$v_1, v_2, ...$$ over a field (let's say $$\R$$) is given by
 
-$$\textup{span}(v_1, v_2, ...)=\{c_1 v_1 + c_2 v_2 + ...\ \textup{such that } c_1, c_2 ... \in \R\}$$
+$$\text{span}(v_1, v_2, ...)=\{c_1 v_1 + c_2 v_2 + ...\ \text{such that } c_1, c_2 ... \in \R\}$$
 
 ### Basis Vectors
 Consider the 2D plane under standard Cartesian coordinates (the xy plane you've used for virtually everything). You can represent every coordinate in that space in terms of an _x_ value and a _y_ value - as multiples of the vectors $$\hat{x}=\begin{bmatrix}1 & 0\end{bmatrix}^\intercal$$ and $$\hat{y}=\begin{bmatrix}0 & 1\end{bmatrix}^\intercal$$. The 2D-plane ($$\R^2$$) is therefore spanned by $$\hat{x}$$ and $$\hat{y}$$, and so $$\{\hat{x}, \hat{y}\}$$ forms a **vector basis** of $$\R^2$$.
@@ -187,4 +186,3 @@ You might notice that I'm mixing the terms matrix and transformation a bit - the
 
 ## Beyond Linear Transformations: Affine Transformations
 FOr this course, 
-Upmath_ Markdown & LaTeX Online Editor.html

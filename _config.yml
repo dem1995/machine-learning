@@ -5,3 +5,6 @@ remote_theme: pmarsceill/just-the-docs
 aux_links:
   "Source/Download":
     - "//github.com/dem1995/machine-learning"
+mathjax:
+  source: http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  config: 'MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "AMS" } } })'

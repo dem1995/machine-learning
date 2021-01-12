@@ -101,7 +101,42 @@ We will elaborate on these topics and more in the sections below.
 
 \*Apparently Commonwealth cups and American cups are different? I wonder if I've been preparing food wrong lately :p.
 ## Linear Combinations
+As mentioned previously, **a _linear combination_ is a set of things (usually vectors, in our case) multiplied by constants (scalars) and added together**. Somewhat more formally, a linear combination of vectors (under some vector space) and scalars (constants from some field) is anything of the form
+
+<img src="https://i.upmath.me/svg/a_1%20v_1%20%2B%20a_2%20v_2%20%2B%20...%20%2B%20a_n%20v_n" alt="a_1 v_1 + a_2 v_2 + ... + a_n v_n" />
+
+Put another way, it's any result of adding scaled things. It gets its name _linear_ because lines result from linear combinations of vectors constrained by equivalence with some scalar.
+
 ### Span
+Given a collection of vectors, you can combine them in different ways. Think of what you can do with just the vectors (0, 1) and (1, 0) - you can linearly combine them to reach any point in the xy plane.
+
+**Exercise:**
+Suppose you are on a grid and at the position <img src="https://i.upmath.me/svg/%5Cbegin%7Bbmatrix%7D%200%5C%5C%200%20%5Cend%7Bbmatrix%7D" alt="\begin{bmatrix} 0\\ 0 \end{bmatrix}" />. You are on a journey to Old Man Gauss's house, and have been given a red hoverboard and a blue magic carpet to get there. 
+
+The red hoverboard can move in (possibly fractional or negative) multiples of <img src="https://i.upmath.me/svg/%5Cbegin%7Bbmatrix%7D%0A3%20%5C%5C%0A1%20%0A%5Cend%7Bbmatrix%7D" alt="\begin{bmatrix}
+3 \\
+1 
+\end{bmatrix}" />, and the blue magic carpet can move in (possibly fractional or negative) multiples of <img src="https://i.upmath.me/svg/%5Cbegin%7Bbmatrix%7D%0A1%20%5C%5C%0A2%20%0A%5Cend%7Bbmatrix%7D" alt="\begin{bmatrix}
+1 \\
+2 
+\end{bmatrix}" />.
+
+Old Man Gauss's house is located at <img src="https://i.upmath.me/svg/%5Cbegin%7Bbmatrix%7D%0A107%20%5C%5C%0A64%20%0A%5Cend%7Bbmatrix%7D" alt="\begin{bmatrix}
+107 \\
+64 
+\end{bmatrix}" />.
+Can you reach Old Man Gauss's house?
+
+What if Gauss's house is in the sky at <img src="https://i.upmath.me/svg/%5Cbegin%7Bbmatrix%7D%200%20%26%200%20%26%2020%20%5Cend%7Bbmatrix%7D%5E%5Cintercal" alt="\begin{bmatrix} 0 &amp; 0 &amp; 20 \end{bmatrix}^\intercal" /> (so right above you), and you have a red hoverboard, a blue magic carpet, and a yellow flying scooter. The red hoverboard can go increments of <img src="https://i.upmath.me/svg/%5Cbegin%7Bbmatrix%7D%0A3%20%26%201%20%26%200%20%0A%5Cend%7Bbmatrix%7D%5E%5Cintercal" alt="\begin{bmatrix}
+3 &amp; 1 &amp; 0 
+\end{bmatrix}^\intercal" />, the blue magic carpet can go increments of <img src="https://i.upmath.me/svg/%5Cbegin%7Bbmatrix%7D%201%20%26%202%20%26%200%20%5Cend%7Bbmatrix%7D%5E%5Cintercal" alt="\begin{bmatrix} 1 &amp; 2 &amp; 0 \end{bmatrix}^\intercal" />, and the yellow flying scooter can go increments of <img src="https://i.upmath.me/svg/%5Cbegin%7Bbmatrix%7D%204%20%26%203%20%26%200%20%5Cend%7Bbmatrix%7D%5E%5Cintercal" alt="\begin{bmatrix} 4 &amp; 3 &amp; 0 \end{bmatrix}^\intercal" />. Can you reach Gauss's house in the sky?
+
+(Credit for hoverboard-carpet task goes to https://doi.org/10.1080/10511970.2012.667516)
+
+Given a set of vectors <img src="https://i.upmath.me/svg/v_1%2C%20v_2%2C%20..." alt="v_1, v_2, ..." />, the set of points/vectors you can reach through linear combinations is known as the _span_ of <img src="https://i.upmath.me/svg/v_1%2C%20v_2%2C%20..." alt="v_1, v_2, ..." />. More formally, the span of vectors <img src="https://i.upmath.me/svg/v_1%2C%20v_2%2C%20..." alt="v_1, v_2, ..." /> over a field (let's say <img src="https://i.upmath.me/svg/%5CR" alt="\R" />) is given by
+
+<img src="https://i.upmath.me/svg/%5Ctextup%7Bspan%7D(v_1%2C%20v_2%2C%20...)%3D%5C%7Bc_1%20v_1%20%2B%20c_2%20v_2%20%2B%20...%5C%20%5Ctextup%7Bsuch%20that%20%7D%20c_1%2C%20c_2%20...%20%5Cin%20%5CR%5C%7D" alt="\textup{span}(v_1, v_2, ...)=\{c_1 v_1 + c_2 v_2 + ...\ \textup{such that } c_1, c_2 ... \in \R\}" />
+
 ### Basis Vectors
 ### Null Space
 

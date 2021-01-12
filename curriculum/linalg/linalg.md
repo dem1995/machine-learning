@@ -74,7 +74,7 @@ $$\begin{align*}
 2500 \text{ ml of dough}\\
 500 \text{ ml of chocolate chips}\\
 \end{bmatrix}
-\end{align}$$
+\end{align*}$$
 
 In this way, we can transform data with matrices. You might notice that we transformed each piece individually - that is, the transformed cookie dough amount only relied on the original cookie dough amount, and the transformed chocolate chip amount only relied on the original chocolate chip amount. This is what's known as a _scaling transformation_ - we can do more than that, though.
 
@@ -136,12 +136,12 @@ What if Gauss's house is in the sky at $$\begin{bmatrix} 0 & 0 & 20 \end{bmatrix
 
 (Credit for hoverboard-carpet task goes to https://doi.org/10.1080/10511970.2012.667516)
 
-Given a set of vectors $$v_1, v_2, ...$$, the set of points/vectors you can reach through linear combinations is known as the _span_ of $$v_1, v_2, ...$$. More formally, the span of vectors $$v_1, v_2, ...$$ over a field (let's say $$\R$$) is given by
+Given a set of vectors $$v_1, v_2, ...$$, the set of points/vectors you can reach through linear combinations is known as the _span_ of $$v_1, v_2, ...$$. More formally, the span of vectors $$v_1, v_2, ...$$ over a field (let's say $$\mathbb{R}$$) is given by
 
-$$\text{span}(v_1, v_2, ...)=\{c_1 v_1 + c_2 v_2 + ...\ \text{such that } c_1, c_2 ... \in \R\}$$
+$$\text{span}(v_1, v_2, ...)=\{c_1 v_1 + c_2 v_2 + ...\ \text{such that } c_1, c_2 ... \in \mathbb{R}\}$$
 
 ### Basis Vectors
-Consider the 2D plane under standard Cartesian coordinates (the xy plane you've used for virtually everything). You can represent every coordinate in that space in terms of an _x_ value and a _y_ value - as multiples of the vectors $$\hat{x}=\begin{bmatrix}1 & 0\end{bmatrix}^\intercal$$ and $$\hat{y}=\begin{bmatrix}0 & 1\end{bmatrix}^\intercal$$. The 2D-plane ($$\R^2$$) is therefore spanned by $$\hat{x}$$ and $$\hat{y}$$, and so $$\{\hat{x}, \hat{y}\}$$ forms a **vector basis** of $$\R^2$$.
+Consider the 2D plane under standard Cartesian coordinates (the xy plane you've used for virtually everything). You can represent every coordinate in that space in terms of an _x_ value and a _y_ value - as multiples of the vectors $$\hat{x}=\begin{bmatrix}1 & 0\end{bmatrix}^\intercal$$ and $$\hat{y}=\begin{bmatrix}0 & 1\end{bmatrix}^\intercal$$. The 2D-plane ($$\mathbb{R}^2$$) is therefore spanned by $$\hat{x}$$ and $$\hat{y}$$, and so $$\{\hat{x}, \hat{y}\}$$ forms a **vector basis** of $$\mathbb{R}^2$$.
 
 
 

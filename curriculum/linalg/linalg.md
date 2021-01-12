@@ -164,7 +164,7 @@ then you can reach that goal vector via
 $$\begin{align*}v_{\text{goal}} = & d_1 v_1 + d_2 v_2 + ... + d_{n-1} v_{n-1} \\
 &+d_n (c_1 v_1 + c_2 v_2 + ... + c_{n-1} v_{n-1})\end{align*}$$
 
-Any vector that can't be reached by a set of vectors is said to be **linearly independent** of that set of vectors. Any set of vectors where none of the vectors can be reached by the others is called a linearly independent set of vectors. The proof for this next fact is a bit beyond the scope of this course, but provided if you have _n_ linearly independent vectors of drawn from $$\mathbb{R}^n$$, those vectors span $$\mathbb{R}^n$$, and any additional vectors are linearly dependent on those.
+Any vector that can't be reached by a set of vectors is said to be **linearly independent** of that set of vectors. Any set of vectors where none of the vectors can be reached by the others is called a linearly independent set of vectors. Provided if you have _n_ linearly independent vectors of drawn from $$\mathbb{R}^n$$, those vectors span $$\mathbb{R}^n$$, and any additional vectors are linearly dependent on those.
 
 
 ### Null Space

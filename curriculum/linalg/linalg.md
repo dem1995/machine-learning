@@ -134,15 +134,37 @@ What if Gauss's house is in the sky at $$\begin{bmatrix} 0 & 0 & 20 \end{bmatrix
 3 & 1 & 0 
 \end{bmatrix}^\intercal$$, the blue magic carpet can go increments of $$\begin{bmatrix} 1 & 2 & 0 \end{bmatrix}^\intercal$$, and the yellow flying scooter can go increments of $$\begin{bmatrix} 4 & 3 & 0 \end{bmatrix}^\intercal$$. Can you reach Gauss's house in the sky?
 
-(Credit for hoverboard-carpet task goes to https://doi.org/10.1080/10511970.2012.667516)
+(Credit for hoverboard-carpet task goes to <https://doi.org/10.1080/10511970.2012.667516>)
 
 Given a set of vectors $$v_1, v_2, ...$$, the set of points/vectors you can reach through linear combinations is known as the _span_ of $$v_1, v_2, ...$$. More formally, the span of vectors $$v_1, v_2, ...$$ over a field (let's say $$\mathbb{R}$$) is given by
 
 $$\text{span}(v_1, v_2, ...)=\{c_1 v_1 + c_2 v_2 + ...\ \text{such that } c_1, c_2 ... \in \mathbb{R}\}$$
 
-### Basis Vectors
+### Basis Vectors and Linear Dependence/Independence
 Consider the 2D plane under standard Cartesian coordinates (the xy plane you've used for virtually everything). You can represent every coordinate in that space in terms of an _x_ value and a _y_ value - as multiples of the vectors $$\hat{x}=\begin{bmatrix}1 & 0\end{bmatrix}^\intercal$$ and $$\hat{y}=\begin{bmatrix}0 & 1\end{bmatrix}^\intercal$$. The 2D-plane ($$\mathbb{R}^2$$) is therefore spanned by $$\hat{x}$$ and $$\hat{y}$$, and so $$\{\hat{x}, \hat{y}\}$$ forms a **vector basis** of $$\mathbb{R}^2$$.
 
+It takes at least two vectors to span a 2D space. We say "at least", because there are certain sets of vectors that still won't be able to span the whole space. For example, consider the set of vectors $$\{\vec{v_1}=\begin{bmatrix}0 & 1\end{bmatrix}^\intercal, \vec{v_2}=\begin{bmatrix}0 & 3.5\end{bmatrix}^\intercal\}$$. The span of these vectors is the entire x-axis, but nothing else!
+
+Here, $$v_2$$ is what's known as _linearly dependent_ on $$v_1$$ (and vice-versa). This is because $$v_2$$ is a scalar multiple of $$v_1$$:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$v_2=3.5v_1$$
+
+More generally, a vector $$v_n$$ is linearly dependent on a set of vectors $$\{v_1, v_2, ..., v_{n-1}\}$$ if $$v_n$$ can be expressed as a linear combination of that set of vectors - i.e. there is some set of constants such that
+
+$$v_n = c_1 v_1 + c_2 v_2 + ... + c_{n-1} v_{n-1}$$
+
+If a vector $$v_n$$ is linearly dependent on other vectors, whether it's included in a set or not doesn't impact those vectors' span. This is because you can combine those other vectors to create $$v_n$$ and use that as your $$v_n$$ - i.e. if you can reach some goal vector by using
+
+$$v_{\text{goal}} = d_1 v_1 + d_2 v_2 + ... + d_{n-1} v_{n-1} + d_n v_n$$
+
+and you have that
+
+$$v_n = c_1 v_1 + c_2 v_2 + ... + c_{n-1} v_{n-1}$$
+
+then you can reach that goal vector via
+
+$$\begin{align*}v_{\text{goal}} = & d_1 v_1 + d_2 v_2 + ... + d_{n-1} v_{n-1} \\
+&+d_n (c_1 v_1 + c_2 v_2 + ... + c_{n-1} v_{n-1})\end{align*}$$
+
+Any vector that can't be reached by a set of vectors is said to be **linearly independent** of that set of vectors. Any set of vectors where none of the vectors can be reached by the others is called a linearly independent set of vectors. The proof for this next fact is a bit beyond the scope of this course, but provided if you have _n_ linearly independent vectors of drawn from $$\mathbb{R}^n$$, those vectors span $$\mathbb{R}^n$$, and any additional vectors are linearly dependent on those.
 
 
 ### Null Space

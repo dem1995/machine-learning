@@ -210,10 +210,10 @@ You might notice that I'm mixing the terms matrix and transformation a bit - the
 }
 </style>
 
-<div class="flex-container">
-  <div style="flex-grow: 1">$$test$$</div>
-  <div style="flex-grow: 1">2</div>
-  <div style="flex-grow: 8">3</div>
+<div class="flex-container" markdown="1">
+  <div style="flex-grow: 1">Scaling</div>
+  <div style="flex-grow: 1; text-align: center">$$\begin{bmatrix}x & 0 \\0 & y \\\end{bmatrix}$$</div>
+  <div style="flex-grow: 1; text-align: center">![Example of scaling transformation being applied to a square](scaling.jpg){:height="200px" width="200px"}</div>
 </div>
 
 |&nbsp;|&nbsp;|&nbsp;|&nbsp;|

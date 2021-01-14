@@ -101,6 +101,7 @@ $$D(\vec{x})= \mathbf{D}\vec{x}$$
 We will elaborate on these topics and more in the sections below.
 
 \*Apparently Commonwealth cups and American cups are different? I wonder if I've been preparing food wrong lately :p.
+
 ## Linear Combinations
 As mentioned previously, **a _linear combination_ is a set of things (usually vectors, in our case) multiplied by constants (scalars) and added together**. Somewhat more formally, a linear combination of vectors (under some vector space) and scalars (constants from some field) is anything of the form
 
@@ -187,7 +188,6 @@ Formally, a linear transformation _T_: *V* ⭢ *W* (where _V_ and _W_ are real v
 |**Homogeneity**|$$L(r\vec{v})=rL(\vec{v})$$|$$\forall \vec{v} \in V, r\in \mathbb{R}$$|
 
 
-
 ### Examples
 Below are the fundamental 2D linear transformations/matrices
 #### Identity
@@ -221,15 +221,19 @@ You might notice that I'm mixing the terms matrix and transformation a bit - the
 
 |&nbsp;|&nbsp;|&nbsp;|&nbsp;|
 |--|--|--|--|
-|Scaling|$$\begin{bmatrix}x & 0 \\0 & y \\\end{bmatrix}$$| |Scaling matrices scale a vector along the direction of the vector space's basis vectors (the vectors corresponding to the coordinates being used - i.e. (0, 1) and (1,0) in many 2D-cases).|
-|Reflection|$$\text{Ref}(\theta)=\begin{bmatrix}x & 0 \\0 & y \\\end{bmatrix}$$| |Reflection mirrors a vector across a line going through the origin. Only reflections across lines going through the origin are linear transformations (although all are affine transforms; more on that later)|
+|Scaling|$$\begin{bmatrix}k_1 & 0 \\0 & k_2 \\\end{bmatrix}$$|![Example of scaling transformation being applied to a square](scaling.jpg){:height="200px" width="200px"}|Scaling transformations stretch/shrink vector along the direction of the vector space's basis vectors- by $$k_1$$ in the x-directions, $$k_2$$ in the y-directions.|
+|Reflection|$$\frac{1}{||\vec{l}||}\begin{bmatrix}\vec{l}_x^2-\vec{l}_y^2 & 2\vec{l}_x\vec{l}_y \\2\vec{l}_x\vec{l}_y & \vec{l}_y^2-\vec{l}_x^2 \\\end{bmatrix}=\begin{bmatrix}\cos(2\theta) & \sin(2\theta) \\\sin(2\theta) & -\cos(2\theta) \end{bmatrix}$$|![Example of reflection transformation being applied to a square](reflection.jpg){:height="200px" width="200px"}|Reflection mirrors a vector across a line $$\vec{l}$$ (of angle (_θ_)) going through the origin. Only reflections across lines going through the origin are linear transformations (although all are affine transforms; potentially more on that later)|
+|Rotation|$$\begin{bmatrix}\cos(\theta) & -\sin(\theta) \\\sin(\theta) & \cos(\theta) \end{bmatrix}$$|![Example of rotation transformation being applied to a square](rotation.jpg){:height="200px" width="200px"}|Rotation rotates a vector by angle _θ_ about the origin.|
+|Shearing|$$\begin{bmatrix}1 & s \\r & 1 \end{bmatrix} | s \cdot r = 0$$|![Example of shear transformation being applied to a square](shearing.jpg){:height="200px" width="200px"}|Shearing is sort of like scaling, but the x-coordinate gets a certain amount of the y-coordinate tacked on (and vice-versa). Shear transforms preserve the angle of horizontal lines if r=0, and they preserve the angle of vertical lines when s=0.|
 
-
-
-**TODO**
-
-
+## Matrix decomposition
+### Eigenvalues and Eigenvectors
+**TODO** (bonus content anyways)
+### Singular-Value Decomposition
+**TODO** (bonus content anyways)
+### Principal Component Analysis
+**TODO** (bonus content anyways)
 
 
 ## Beyond Linear Transformations: Affine Transformations
-FOr this course, 
+**Maybe TODO?** (bonus content anyways)

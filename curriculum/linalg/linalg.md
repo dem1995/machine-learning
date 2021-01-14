@@ -180,9 +180,12 @@ Any vector that can't be reached by a set of vectors is said to be **linearly in
 Intuitively, a linear transformation is one that, if applied to a coordinate space, **preserves lines**, **preserves ratios of distances between points**, and that **map the origin to itself**. If any one of these is violated, the transformation is not linear. As an example, any transformation that translates the vector (0, 0) is not linear.
 #### Formally
 Formally, a linear transformation _T_: *V* ⭢ *W* (where _V_ and _W_ are real vector spaces) is any transformation that satisfies the following two axioms:
+|&nbsp;|&nbsp;|&nbsp;|
+|---|---|--:|
+|**Additivity**| $$L(\vec{v}_1+\vec{v}_2)=L(\vec{v}_1)+L(\vec{v}_2)$$|$$\forall \vec{v}_1, \vec{v}_2 \in V$$
+|**Homogeneity**|$$L(r\vec{v})=rL(\vec{v})$$|$$\forall \vec{v} \in V, r\in \R$$|
 
-* **Additivity**: $$L(\vec{v}_1+\vec{v}_2)=L(\vec{v}_1)+L(\vec{v}_2) \forall \vec{v}_1, \vec{v}_2 \in V$$
-* **Homogeneity**: $$L(r\vec{v})=rL(\vec{v}) \forall \vec{v} \in V, r\in \R$$
+
 
 ### Examples
 Below are the fundamental 2D linear transformations/matrices
@@ -211,8 +214,8 @@ You might notice that I'm mixing the terms matrix and transformation a bit - the
 
 <div class="flex-container" markdown="1">
   <div style="flex-grow: 1">Scaling</div>
-  <div style="flex-grow: 1; text-align: center">$$\begin{bmatrix}x & 0 \\0 & y \\\end{bmatrix}$$</div>
-  <div style="flex-grow: 1; text-align: center">![Example of scaling transformation being applied to a square](scaling.jpg){:height="200px" width="200px"}</div>
+  <div style="flex-grow: 1; text-align: center; markdown: 1">$$\begin{bmatrix}x & 0 \\0 & y \\\end{bmatrix}$$</div>
+  <div style="flex-grow: 1; text-align: center; markdown: 1">![Example of scaling transformation being applied to a square](scaling.jpg){:height="200px" width="200px"}</div>
 </div>
 
 |&nbsp;|&nbsp;|&nbsp;|&nbsp;|

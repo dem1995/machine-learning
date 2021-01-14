@@ -213,18 +213,18 @@ You might notice that I'm mixing the terms matrix and transformation a bit - the
 }
 </style>
 
-<div class="flex-container" markdown="1">
+<!-- <div class="flex-container" markdown="1">
   <div style="flex-grow: 1">Scaling</div>
   <div style="flex-grow: 1; text-align: center; markdown: 1">$$\begin{bmatrix}x & 0 \\0 & y \\\end{bmatrix}$$</div>
   <div style="flex-grow: 1; text-align: center; markdown: 1">![Example of scaling transformation being applied to a square](scaling.jpg){:height="200px" width="200px"}</div>
-</div>
+</div> -->
 
 |&nbsp;|&nbsp;|&nbsp;|&nbsp;|
 |--|--|--|--|
 |Scaling|$$\begin{bmatrix}k_1 & 0 \\0 & k_2 \\\end{bmatrix}$$|![Example of scaling transformation being applied to a square](scaling.jpg){:height="200px" width="200px"}|Scaling transformations stretch/shrink vector along the direction of the vector space's basis vectors- by $$k_1$$ in the x-directions, $$k_2$$ in the y-directions.|
-|Reflection|$$\frac{1}{\|\vec{l}\|}\begin{bmatrix}\vec{l}_x^2-\vec{l}_y^2 & 2\vec{l}_x\vec{l}_y \\2\vec{l}_x\vec{l}_y & \vec{l}_y^2-\vec{l}_x^2 \\\end{bmatrix}=\begin{bmatrix}\cos(2\theta) & \sin(2\theta) \\\sin(2\theta) & -\cos(2\theta) \end{bmatrix}$$|![Example of reflection transformation being applied to a square](reflection.jpg){:height="200px" width="200px"}|Reflection mirrors a vector across a line $$\vec{l}$$ (of angle (_θ_)) going through the origin. Only reflections across lines going through the origin are linear transformations (although all are affine transforms; potentially more on that later)|
+|Reflection|$$\frac{1}{\|\vec{l}\|}\begin{bmatrix}\vec{l}_x^2-\vec{l}_y^2 & 2\vec{l}_x\vec{l}_y \\2\vec{l}_x\vec{l}_y & \vec{l}_y^2-\vec{l}_x^2 \\\end{bmatrix}\\=\begin{bmatrix}\cos(2\theta) & \sin(2\theta) \\\sin(2\theta) & -\cos(2\theta) \end{bmatrix}$$|![Example of reflection transformation being applied to a square](reflection.jpg){:height="200px" width="200px"}|Reflection mirrors a vector across a line $$\vec{l}$$ (of angle (_θ_)) going through the origin. Only reflections across lines going through the origin are linear transformations (although all are affine transforms; potentially more on that later)|
 |Rotation|$$\begin{bmatrix}\cos(\theta) & -\sin(\theta) \\\sin(\theta) & \cos(\theta) \end{bmatrix}$$|![Example of rotation transformation being applied to a square](rotation.jpg){:height="200px" width="200px"}|Rotation rotates a vector by angle _θ_ about the origin.|
-|Shearing|$$\begin{bmatrix}1 & s \\r & 1 \end{bmatrix} \text{ s.t. } s \cdot r = 0$$|![Example of shear transformation being applied to a square](shearing.jpg){:height="200px" width="200px"}|Shearing is sort of like scaling, but the x-coordinate gets a certain amount of the y-coordinate tacked on (and vice-versa). Shear transforms preserve the angle of horizontal lines if r=0, and they preserve the angle of vertical lines when s=0.|
+|Shearing|$$\begin{bmatrix}1 & s \\ r & 1 \end{bmatrix} \text{ s.t. } s \cdot r = 0$$|![Example of shear transformation being applied to a square](shearing.jpg){:height="200px" width="200px"}|Shearing is sort of like scaling, but the x-coordinate gets a certain amount of the y-coordinate tacked on (and vice-versa). Shear transforms preserve the angle of horizontal lines if r=0, and they preserve the angle of vertical lines when s=0.|
 
 ## Matrix decomposition
 ### Eigenvalues and Eigenvectors

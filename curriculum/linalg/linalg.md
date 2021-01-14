@@ -180,6 +180,7 @@ Any vector that can't be reached by a set of vectors is said to be **linearly in
 Intuitively, a linear transformation is one that, if applied to a coordinate space, **preserves lines**, **preserves ratios of distances between points**, and that **map the origin to itself**. If any one of these is violated, the transformation is not linear. As an example, any transformation that translates the vector (0, 0) is not linear.
 #### Formally
 Formally, a linear transformation _T_: *V* ⭢ *W* (where _V_ and _W_ are real vector spaces) is any transformation that satisfies the following two axioms:
+
 |&nbsp;|&nbsp;|&nbsp;|
 |--|--|--|
 | **Additivity** | $$L(\vec{v}_1+\vec{v}_2)=L(\vec{v}_1)+L(\vec{v}_2)$$ | $$\forall \vec{v}_1, \vec{v}_2 \in V$$ |

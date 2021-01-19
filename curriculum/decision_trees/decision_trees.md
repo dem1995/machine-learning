@@ -12,7 +12,7 @@ nav_order: 2
 ## Introduction - "What is a a decision tree?"
 Every day you make decisions. What food to get from the grocery store, what to prepare for dinner that night, who to hang out with after after work (and where, when we're not in the middle of a pandemic). Some of these decisions are simple - but for the more complicated ones, how do you break it down? One way of doing so is by breaking a larger decision into a bunch of smaller decisions.
 
-A **decision tree** is a tree used for classifying outcomes - given some set of information, you answer some question by proceeding down the tree.
+A **decision tree** is a tree used for classifying outcomes - given some set of information, you answer some question by proceeding down the tree, answering smaller questions to guide you along the way.
 
 ### Example of a tree
 ![Decision tree for getting an apartment](apartment_decision_tree.png)

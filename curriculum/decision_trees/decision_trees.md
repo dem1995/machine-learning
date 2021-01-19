@@ -10,6 +10,11 @@ nav_order: 2
 
 # Decision Trees
 ## Introduction - "What is a a decision tree?"
+Every day you make decisions. What food to get from the grocery store, what to prepare for dinner that night, who to hang out with after after work (and where, when we're not in the middle of a pandemic). Some of these decisions are simple - but for the more complicated ones, how do you break it down? One way of doing so is by breaking a larger decision into a bunch of smaller decisions.
+
+![Decision tree for getting an apartment](apartment_decision_tree.png)
+
+Above, for example, is a (simplified) example of a decision tree for me choosing an apartment.
 ### Terminology
 ### Example of a tree
 ### Probability

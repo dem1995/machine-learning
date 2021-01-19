@@ -22,7 +22,7 @@ Above, for example, is a (simplified) example of a decision tree for me choosing
 ### Properties/Terminology
 Recall some terminology/properties about trees: the head of a tree is called the "root", the bottoms of the tree are called "leaf nodes/terminal nodes", and the connections between arbitrary nodes in the tree are called "edges". Trees, by definition, only ever proceed from roots to leaf nodes - you don't have any child nodes that have multiple parents, and you don't end up with cycles anywhere in the tree. **In the case of a decision tree, the leaves are outcomes, and the edges are decisions**. 
 
-Despite that you'll commonly see decision trees that are binary - that is, trees where every nonterminal node has two children; trees where every node has exactly two possible decisions - decision trees can have as many branches as you want. As an example, consider trying to decide whether a day is "rainy" based on month of the year - the node might break into Late Winter, Spring, Summer, Fall, and Early Winter nodes.
+Despite the fact that you'll commonly see decision trees that are binary - that is, trees where every nonterminal node has two children; trees where every node has exactly two possible decisions - decision trees can have as many branches as you want. As an example, consider trying to decide whether a day is "rainy" based on month of the year - the node might break into Late Winter, Spring, Summer, Fall, and Early Winter nodes.
 
 
 ### Probability

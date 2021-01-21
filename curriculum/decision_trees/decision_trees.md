@@ -2,6 +2,7 @@
 layout: default
 title: Decision Trees
 parent: Curriculum
+mathjax: true
 nav_order: 2
 ---
 ### External Resources
@@ -24,11 +25,11 @@ Recall some terminology/properties about trees: the head of a tree is called the
 
 Despite the fact that you'll commonly see decision trees that are binary - that is, trees where every nonterminal node has two children; trees where every node has exactly two possible decisions - decision trees can have as many branches as you want. As an example, consider trying to decide whether a day is "rainy" based on month of the year - the node might break into Late Winter, Spring, Summer, Fall, and Early Winter nodes.
 
-![Pentary hot-cold decision tree](decision_tree_hot_cold_wide.png){:height="500px" width="500px" .center-image}
+![Pentary hot-cold decision tree](decision_tree_hot_cold_wide.png){:height="600px" width="600px" .center-image}
 
 However, all such trees can also be represented as binary trees, like below
 
-![Binary hot-cold decision tree](decision_tree_hot_cold_binary.png){:height="500px" width="500px" .center-image}
+![Binary hot-cold decision tree](decision_tree_hot_cold_binary.png){:height="600px" width="600px" .center-image}
 
 ### Probability
 Recall that the product rule for independent events is that, given two events $$A_1$$ and $$A_2$$, the probability $$P(A_2|A_1)$$ - that is, the probability that $$A_2$$ happens given that $$A_1$$ happens is just $$P(A_2|A_1) = P(A_1)\cdot P(A_2)$$ (the odds of $$A_1$$ happening, then the odds of $$A_2$$ happening). For dependent events, the product rule is $$P(A_2|A_1) = \frac{P(A_1, A_2)}{P(A_2)}$$

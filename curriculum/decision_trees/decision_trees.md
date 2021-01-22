@@ -7,7 +7,8 @@ nav_order: 2
 ---
 ### External Resources
 - (Before/During) [Prateek Karkare's _Decision Trees — An Intuitive Introduction_](https://www.kdnuggets.com/2019/02/decision-trees-introduction.html) offers a very good first glance at decision trees. I highly recommend checking it out, especially the first page. You can look at it before reading this page without issue.
-- (During/After) [Kilian Weinberger's Decision Tree Lecture Notes](https://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/lecturenote17.html) Interactive demo for plotting points/forming a decision tree for classified points in a 2D plane. Also useful for understanding decision trees in the sense of a spatial perspective upon the data being classified, and has pseudocode for training a decision tree.
+- (During/After) [Fabien Lauer's "Decision Tree" Page](https://mlweb.loria.fr/book/en/decisiontree.html) Interactive demo for plotting points/forming a decision tree for classified points in a 2D plane. Also useful for understanding decision trees in the sense of a spatial perspective upon the data being classified, and has pseudocode for training a decision tree.
+- (After) [Kilian Weinberger's Decision Tree Lecture Notes](https://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/lecturenote17.html) Goes over purity functions and the ID3 algorithm for determining a decision tree from a dataset using them.
 
 # Decision Trees
 ## Introduction - "What is a a decision tree?"
@@ -36,12 +37,23 @@ Recall that the product rule for independent events is that, given two events $$
 
 In decision trees, we normally care about the events at the leaf nodes (at the bottom of the tree), but we can also talk about the events along the way. In the hot-cold decision tree earlier, for example, we can talk about "Autumn" being an event and "Day" being an event - in that case, the odds of reaching the particular "hot" node that follows from it is just
 
-$$\begin{align*}P(\text{Specific hot leaf node event}) &= P(\text{Autumn}) \cdot P(\text{Day}|\text{Autumn}) \cdot P(\text{Hot}|\text{Autumn}∩\text{Day})\\
-&= P(\text{Autumn}) \cdot P(\text{Day}) \cdot 1 = \frac{1}{4} \cdot \frac{1}{2}\end{align*}$$
-
 ![Pentary hot-cold decision tree](decision_tree_hot_cold_wide.png){:height="600px" width="600px" .center-image}
 
+$$\begin{align*}P(\text{Specific hot leaf node event}) &= P(\text{Autumn}) \cdot P(\text{Day}|\text{Autumn}) \cdot P(\text{Hot}|\text{Autumn}∩\text{Day})\\
+&= P(\text{Autumn}) \cdot P(\text{Day}) \cdot 1 = \frac{1}{4} \cdot \frac{1}{2}\end{align*}$${:height="600px" width="600px" .center-image}
+
 ## Intuition - partitioning space
+Intuitively, we can think of decision trees as partitioning space into a number of sectors. Consider a bunch of vectors in space, and suppose we're trying to figure out their labels. Following along a decision tree, at each node, we come across a decisiwon; that decision splits the vectors in twain. For example, consider the below dataset
+
+![Vectors in 2D space that are either red or blue](interactive_dataset_original.png){:height="600px" width="600px" .center-image}
+
+This is a collection of vectors in 2D space. The computer does not see the color, however; it just sees numbers (presumably we could just encode the colors, but the idea behind this is to predict vectors we /don't/ know the colors/labels for). The decision tree at the left will (in most cases) guide us towards the correct color, as we shall see.
+
+![Vectors in 2D space that are either red or blue. We are considering the first node of the decision tree; the whole plane is highlighted](interactive_dataset_original_node1.png){:height="600px" width="600px" .center-image}
+
+We are trying to decide if a vector is red or blue. To do this, we consider - "is the y-coordinate less than 5?" This question splits the plane in twain - if the answer is "no" we're in the part of the plane above y=5; if the answer is "yes" we're in the part of the plane below y=5. Each branch from the initial node takes us to one of these two sections. For the sake of consideration, let us consider the case where the answer is "yes, we're below y=5" and move to the branch of the tree corresponding with that answer.
+
+
 ### Curse of Dimensionality
 ## Purity
 ### Entropy
@@ -49,3 +61,5 @@ $$\begin{align*}P(\text{Specific hot leaf node event}) &= P(\text{Autumn}) \cdot
 ## Forests
 ### Voting
 ## Random Forest Classifiers
+## Acknowledgements
+* Interactive 2D dataset taken from Fabien Lauer's "Decision Tree" Page at <https://mlweb.loria.fr/book/en/decisiontree.html>

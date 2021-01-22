@@ -40,6 +40,9 @@ $$\begin{align*}P(\text{Specific hot leaf node event}) &= P(\text{Autumn}) \cdot
 
 ## Intuition - partitioning space
 ### Curse of Dimensionality
+## Purity
+### Entropy
+### GINI Coefficient
 ## Forests
 ### Voting
 ## Random Forest Classifiers

@@ -39,6 +39,8 @@ In decision trees, we normally care about the events at the leaf nodes (at the b
 $$\begin{align*}P(\text{Specific hot leaf node event}) &= P(\text{Autumn}) \cdot P(\text{Day}|\text{Autumn}) \cdot P(\text{Hot}|\text{Autumn}∩\text{Day})\\
 &= P(\text{Autumn}) \cdot P(\text{Day}) \cdot 1 = \frac{1}{4} \cdot \frac{1}{2}\end{align*}$$
 
+![Pentary hot-cold decision tree](decision_tree_hot_cold_wide.png){:height="600px" width="600px" .center-image}
+
 ## Intuition - partitioning space
 ### Curse of Dimensionality
 ## Purity

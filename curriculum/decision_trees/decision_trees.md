@@ -36,7 +36,8 @@ Recall that the product rule for independent events is that, given two events $$
 
 In decision trees, we normally care about the events at the leaf nodes (at the bottom of the tree), but we can also talk about the events along the way. In the hot-cold decision tree earlier, for example, we can talk about "Autumn" being an event and "Day" being an event - in that case, the odds of reaching the particular "hot" node that follows from it is just
 
-$$\begin{align*}P(\text{Specific hot leaf node event}) &= P(\text{Autumn}) \cdot P(\text{Day}|\text{Autumn}) \cdot P(\text{Hot}|\text{Autumn}∩\text{Day})&= P(\text{Autumn}) * P(\text{Day}) * 1 = \frac{1}{4} \cdot \frac{1}{2}\end{align*}$$
+$$\begin{align*}P(\text{Specific hot leaf node event}) &= P(\text{Autumn}) \cdot P(\text{Day}|\text{Autumn}) \cdot P(\text{Hot}|\text{Autumn}∩\text{Day})\\
+&= P(\text{Autumn}) * P(\text{Day}) * 1 = \frac{1}{4} \cdot \frac{1}{2}\end{align*}$$
 
 ## Intuition - partitioning space
 ### Curse of Dimensionality

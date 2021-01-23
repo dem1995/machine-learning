@@ -62,7 +62,7 @@ You might notice that while splitting up the plane in this manner/using a decisi
 ## Purity
 Cribbing an example from [here](https://discuss.analyticsvidhya.com/t/decision-tree-gini-impurity-purity/37650/3), suppose you have a bar of gold. The purity of this gold bar is what % gold it is - it's 100% pure gold if every atom in it is pure gold, 50% pure gold if only half of it is, and so on. Generalizing this a bit, suppose we had a mixed gold-silver bar of metal and all we cared about was purity - regardless of metal. This bar would be at its most pure at 100% gold, 0% silver, or at 0% gold, 100% silver. It would be at its least pure at 50% gold, 50% silver.
 
-When talking about the results decision trees we care about something similar. If our decision tree has the same answers for a random bunch of vectors, when we reach the end we want most of the vectors to have the same classification (put spatially, after our tree partitions space we ideally want a given partition to have only one "true label" for all of its vectors).
+When talking about the results decision trees we care about something similar. If our decision tree has the same answers for a random bunch of vectors, when we reach the end we want most of the vectors to have the same classification. If we throw a bunch of vectors at our tree and they all reach the same leaf node, they should mostly all have the same true classification. Putting it spatially, after our tree partitions space, we ideally want a given partition to have only one "true label" for all of its vectors.
 
 |![Impure partition example. The final node puts red and blue dots together](impure_partition.png)|![Pure partition example. The final node has only red dots](pure_partition.png)|
 |---|---|

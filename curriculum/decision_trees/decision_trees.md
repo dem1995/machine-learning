@@ -60,6 +60,14 @@ In this next node of the tree, we consider - "is the y-coordinate greater than -
 You might notice that while splitting up the plane in this manner/using a decision tree lets us correctly label /most/ of the vectors, there are extraneous vectors that are misclassified in the process. Creating a decision tree is a balance between /conciseness/ - how many decisions/nodes we have - and /accuracy/ - how many of the labelled vectors are classified correctly. We shall talk about this in a moment when we discuss how _pure_ results of the decision tree are.
 
 ## Purity
+Cribbing an example from [here](https://discuss.analyticsvidhya.com/t/decision-tree-gini-impurity-purity/37650/3), suppose you have a bar of gold. The purity of this gold bar is what % gold it is - it's 100% pure gold if every atom in it is pure gold, 50% pure gold if only half of it is, and so on. Generalizing this a bit, suppose we had a mixed gold-silver bar of metal and all we cared about was purity - regardless of metal. This bar would be at its most pure at 100% gold, 0% silver, or at 0% gold, 100% silver. It would be at its least pure at 50% gold, 50% silver.
+
+When talking about the results decision trees we care about something similar. If our decision tree has the same answers for a random bunch of vectors, when we reach the end we want most of the vectors to have the same classification (put spatially, after our tree partitions space we ideally want a given partition to have only one "true label" for all of its vectors).
+
+|![Impure partition example. The final node puts red and blue dots together](impure_partition.png){:height="300px" width="300px" .center-image)|![Pure partition example. The final node has only red dots](pure_partition.png){:height="300px" width="300px" .center-image)|
+|---|---|
+|Example of an impure partition. The leaf node of the tree results in a mixture of red/blue dots - it would be much better if it just had one or the other, since it classifies them all the same way (unless the tree is expanded past this point, so more decisions are made).|Example of a 100% pure partition. All of the vectors here have the same "true" label, red.|
+
 ### Using Purity to Generate Trees
 ### Types of Purity
 #### Entropy

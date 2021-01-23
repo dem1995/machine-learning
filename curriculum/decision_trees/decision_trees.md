@@ -64,7 +64,7 @@ Cribbing an example from [here](https://discuss.analyticsvidhya.com/t/decision-t
 
 When talking about the results decision trees we care about something similar. If our decision tree has the same answers for a random bunch of vectors, when we reach the end we want most of the vectors to have the same classification (put spatially, after our tree partitions space we ideally want a given partition to have only one "true label" for all of its vectors).
 
-|![Impure partition example. The final node puts red and blue dots together](impure_partition.png){:height="300px" width="300px" .center-image)|![Pure partition example. The final node has only red dots](pure_partition.png){:height="300px" width="300px" .center-image)|
+|![Impure partition example. The final node puts red and blue dots together](impure_partition.png)|![Pure partition example. The final node has only red dots](pure_partition.png)|
 |---|---|
 |Example of an impure partition. The leaf node of the tree results in a mixture of red/blue dots - it would be much better if it just had one or the other, since it classifies them all the same way (unless the tree is expanded past this point, so more decisions are made).|Example of a 100% pure partition. All of the vectors here have the same "true" label, red.|
 

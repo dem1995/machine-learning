@@ -42,7 +42,7 @@ In decision trees, we normally care about the events at the leaf nodes (at the b
 $$\begin{align*}P(\text{Specific hot leaf node event}) &= P(\text{Autumn}) \cdot P(\text{Day}|\text{Autumn}) \cdot P(\text{Hot}|\text{Autumn}∩\text{Day})\\
 &= P(\text{Autumn}) \cdot P(\text{Day}) \cdot 1 = \frac{1}{4} \cdot \frac{1}{2}\end{align*}$${:height="600px" width="600px" .center-image}
 
-## Intuition - partitioning space
+### Intuition - partitioning space
 Intuitively, we can think of decision trees as partitioning space into a number of sectors. Consider a bunch of vectors in space, and suppose we're trying to figure out their labels. Following along a decision tree, at each node, we come across a decisiwon; that decision splits the vectors in twain. For example, consider the below dataset
 
 ![Vectors in 2D space that are either red or blue](interactive_dataset_original.png){:height="600px" width="600px" .center-image}

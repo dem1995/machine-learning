@@ -53,12 +53,19 @@ This is a collection of vectors in 2D space. The computer does not see the color
 
 We are trying to decide if a vector is red or blue. To do this, we consider - "is the y-coordinate less than 5?" This question splits the plane in twain - if the answer is "no" we're in the part of the plane above y=5; if the answer is "yes" we're in the part of the plane below y=5. Each branch from the initial node takes us to one of these two sections. For the sake of consideration, let us consider the case where the answer is "yes, we're below y=5" and move to the branch of the tree corresponding with that answer.
 
+![Vectors in 2D space that are either red or blue. We are considering a level down in the decision tree; we are only considering vectors where the y-coordinate is less than 5 now](decision_tree_interactive_left1.png){:height="600px" width="600px" .center-image)
 
-### Curse of Dimensionality
+In this next node of the tree, we consider - "is the y-coordinate greater than -5.2"? This question splits the part of the plane we're already considering, so we have two pieces - if the answer is "yes", we're between y=-5.2 and y=5, and we call the vector "red". If it's below y=-5.2, we call the vector "blue".
+
+You might notice that while splitting up the plane in this manner/using a decision tree lets us correctly label /most/ of the vectors, there are extraneous vectors that are misclassified in the process. Creating a decision tree is a balance between /conciseness/ - how many decisions/nodes we have - and /accuracy/ - how many of the labelled vectors are classified correctly. We shall talk about this in a moment when we discuss how _pure_ results of the decision tree are.
+
 ## Purity
-### Entropy
-### GINI Coefficient
+### Using Purity to Generate Trees
+### Types of Purity
+#### Entropy
+#### GINI Coefficient
 ## Forests
+### Curse of Dimensionality
 ### Voting
 ## Random Forest Classifiers
 ## Acknowledgements

@@ -69,6 +69,16 @@ When talking about the results decision trees we care about something similar. I
 |Example of an impure partition. The leaf node of the tree results in a mixture of red/blue dots - it would be much better if it just had one or the other, since it classifies them all the same way (unless the tree is expanded past this point, so more decisions are made).|Example of a 100% pure partition. All of the vectors here have the same "true" label, red.|
 
 ### Using Purity to Generate Trees
+Using the concept of purity to generate trees is fairly straightforward. First off, consider some set of training labelled vectors, $$S$$. First off, choose a way to measure purity. To start with, you can imagine this being something like % of vectors in the set belonging to the same class.
+
+**Top-down Induction of a Decision Tree** 
+_This algorithm returns a node, as well as potentially children of that node and so on - in other words, it returns a tree_
+1. Consider your current, $$S$$ of sample vectors. Take $$S$$'s purity.
+2. 
+    * If $S$ is pure enough, you're done. Just return a node with whatever label most of the cells have _(if you follow the tree to here with a vector, it takes on that label)_.
+    * If $S$ isn't pure enough, use some method to come up with a decision that divides $$S$$ into subsets $$S_1$$, $$S_2$$, ... so that the average purity across all of the subsets is maximized.
+3. Return a node with the decision from the previous step. Run this algorithm on each of the resulting subsets $$S_1$$, $$S_2$$, ... to determine what kinds of nodes they are/ what children they have, if any.
+
 ### Types of Purity
 #### Entropy
 #### GINI Coefficient

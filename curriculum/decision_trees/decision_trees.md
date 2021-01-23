@@ -60,10 +60,10 @@ In this next node of the tree, we consider - "is the y-coordinate greater than -
 You might notice that while splitting up the plane in this manner/using a decision tree lets us correctly label /most/ of the vectors, there are extraneous vectors that are misclassified in the process. Creating a decision tree is a balance between /conciseness/ - how many decisions/nodes we have - and /accuracy/ - how many of the labelled vectors are classified correctly. We shall talk about this in a moment when we discuss how _pure_ results of the decision tree are.
 
 ## Purity
-
-
-### Entropy
-### GINI Coefficient
+### Using Purity to Generate Trees
+### Types of Purity
+#### Entropy
+#### GINI Coefficient
 ## Forests
 ### Curse of Dimensionality
 ### Voting

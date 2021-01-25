@@ -42,7 +42,7 @@ In decision trees, we normally care about the events at the leaf nodes (at the b
 $$\begin{align*}P(\text{Specific hot leaf node event}) &= P(\text{Autumn}) \cdot P(\text{Day}|\text{Autumn}) \cdot P(\text{Hot}|\text{Autumn}∩\text{Day})\\
 &= P(\text{Autumn}) \cdot P(\text{Day}) \cdot 1 = \frac{1}{4} \cdot \frac{1}{2}\end{align*}$${:height="600px" width="600px" .center-image}
 
-## Intuition - partitioning space
+### Intuition - partitioning space
 Intuitively, we can think of decision trees as partitioning space into a number of sectors. Consider a bunch of vectors in space, and suppose we're trying to figure out their labels. Following along a decision tree, at each node, we come across a decisiwon; that decision splits the vectors in twain. For example, consider the below dataset
 
 ![Vectors in 2D space that are either red or blue](interactive_dataset_original.png){:height="600px" width="600px" .center-image}
@@ -60,7 +60,25 @@ In this next node of the tree, we consider - "is the y-coordinate greater than -
 You might notice that while splitting up the plane in this manner/using a decision tree lets us correctly label /most/ of the vectors, there are extraneous vectors that are misclassified in the process. Creating a decision tree is a balance between /conciseness/ - how many decisions/nodes we have - and /accuracy/ - how many of the labelled vectors are classified correctly. We shall talk about this in a moment when we discuss how _pure_ results of the decision tree are.
 
 ## Purity
+Cribbing an example from [here](https://discuss.analyticsvidhya.com/t/decision-tree-gini-impurity-purity/37650/3), suppose you have a bar of gold. The purity of this gold bar is what % gold it is - it's 100% pure gold if every atom in it is pure gold, 50% pure gold if only half of it is, and so on. Generalizing this a bit, suppose we had a mixed gold-silver bar of metal and all we cared about was purity - regardless of metal. This bar would be at its most pure at 100% gold, 0% silver, or at 0% gold, 100% silver. It would be at its least pure at 50% gold, 50% silver.
+
+When talking about the results decision trees we care about something similar. If our decision tree has the same answers for a random bunch of vectors, when we reach the end we want most of the vectors to have the same classification. If we throw a bunch of vectors at our tree and they all reach the same leaf node, they should mostly all have the same true classification. Putting it spatially, after our tree partitions space, we ideally want a given partition to have only one "true label" for all of its vectors.
+
+|![Impure partition example. The final node puts red and blue dots together](impure_partition.png)|![Pure partition example. The final node has only red dots](pure_partition.png)|
+|---|---|
+|Example of an impure partition. The leaf node of the tree results in a mixture of red/blue dots - it would be much better if it just had one or the other, since it classifies them all the same way (unless the tree is expanded past this point, so more decisions are made).|Example of a 100% pure partition. All of the vectors here have the same "true" label, red.|
+
 ### Using Purity to Generate Trees
+Using the concept of purity to generate trees is fairly straightforward. First off, consider some set of training labelled vectors, $$S$$. First off, choose a way to measure purity. To start with, you can imagine this being something like % of vectors in the set belonging to the same class.
+
+**Top-down Induction of a Decision Tree** 
+_This algorithm returns a node, as well as potentially children of that node and so on - in other words, it returns a tree_
+1. Consider your current, $$S$$ of sample vectors. Take $$S$$'s purity.
+2. 
+    * If $S$ is pure enough, you're done. Just return a node with whatever label most of the cells have _(if you follow the tree to here with a vector, it takes on that label)_.
+    * If $S$ isn't pure enough, use some method to come up with a decision that divides $$S$$ into subsets $$S_1$$, $$S_2$$, ... so that the average purity across all of the subsets is maximized.
+3. Return a node with the decision from the previous step. Run this algorithm on each of the resulting subsets $$S_1$$, $$S_2$$, ... to determine what kinds of nodes they are/ what children they have, if any.
+
 ### Types of Purity
 #### Entropy
 #### GINI Coefficient

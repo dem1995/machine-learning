@@ -2,6 +2,7 @@
 layout: default
 title: Probability
 parent: Curriculum
+mathjax: true
 nav_order: 1
 ---
 ### External Resources
@@ -113,18 +114,22 @@ For example, in the case of a fair die I might have a random variable <img src="
 
 As a formal note, random variables are technically transformative functions, which is why, for example, <img src="https://i.upmath.me/svg/P(X%3D%5Ctextup%7Beven%7D)%3D%5Cfrac%7B1%7D%7B2%7D" alt="P(X=\textup{even})=\frac{1}{2}" /> is also valid. However, in practice we do not think of underlying functions when working with random variables, and just think of them as variables that satisfy properties/match values.
 
-### Expected Values and Correlation
-The **expected value** <img src="https://i.upmath.me/svg/%5Cmathbb%7BE%7D(X)" alt="\mathbb{E}(X)" /> of a random variable _X_ is the mean/average of repeatedly sampling _X_. In the case of _X_ representing our fair die roll, <img src="https://i.upmath.me/svg/%5Cmathbb%7BE%7D(X)%3D3.5" alt="\mathbb{E}(X)=3.5" />.
+### Expected Values
+The **expected value** <img src="https://i.upmath.me/svg/%5Cmathbb%7BE%7D(X)" alt="\mathbb{E}[X]" /> of a random variable _X_ is the mean/average of repeatedly sampling _X_. In the case of _X_ representing our fair die roll, <img src="https://i.upmath.me/svg/%5Cmathbb%7BE%7D(X)%3D3.5" alt="\mathbb{E}[X]=3.5" />.
 
 More generally, the expected value of a random variable is given by the following equations:
 
-<img src="https://i.upmath.me/svg/%5Cmathbb%7BE%7D(X)%3D%0A%5Cbegin%7Bcases%7D%0A%20%20%20%20%5Cdisplaystyle%20%5Csum_%7Bx%20%5Cin%20%5COmega%7D%20x%20p(x)%2C%26%20%5Ctext%7Bif%20%7D%20X%20%5Ctext%7B%20is%20sampled%20from%20a%20discrete%20space%7D%5C%5C%0A%20%20%20%20%5Cdisplaystyle%20%5Cint_%7Bx%20%5Cin%20%5COmega%7D%20x%20p(x)%2C%20%20%20%20%20%20%20%20%20%20%20%20%20%20%26%20%5Ctext%7Bif%20%7D%20X%20%5Ctext%7B%20is%20sampled%20from%20a%20continuous%20space%7D%0A%5Cend%7Bcases%7D" alt="\mathbb{E}(X)=
+<img src="https://i.upmath.me/svg/%5Cmathbb%7BE%7D(X)%3D%0A%5Cbegin%7Bcases%7D%0A%20%20%20%20%5Cdisplaystyle%20%5Csum_%7Bx%20%5Cin%20%5COmega%7D%20x%20p(x)%2C%26%20%5Ctext%7Bif%20%7D%20X%20%5Ctext%7B%20is%20sampled%20from%20a%20discrete%20space%7D%5C%5C%0A%20%20%20%20%5Cdisplaystyle%20%5Cint_%7Bx%20%5Cin%20%5COmega%7D%20x%20p(x)%2C%20%20%20%20%20%20%20%20%20%20%20%20%20%20%26%20%5Ctext%7Bif%20%7D%20X%20%5Ctext%7B%20is%20sampled%20from%20a%20continuous%20space%7D%0A%5Cend%7Bcases%7D" alt="\mathbb{E}[X]=
 \begin{cases}
     \displaystyle \sum_{x \in \Omega} x p(x),&amp; \text{if } X \text{ is sampled from a discrete space}\\
     \displaystyle \int_{x \in \Omega} x p(x),              &amp; \text{if } X \text{ is sampled from a continuous space}
 \end{cases}" />
 
-In other words, the expected value is the result of adding up each of the samples by their weight of occurrence.
+In other words, the expected value is the result of adding up each of the samples by their weight of occurrence. In the below spinner, if we have a random variable representing the underlying distribution of spin results, the expected value is just each result weighted by its odds of occurring.
+
+![Image of spinner with 50% of the disk being 1, 12.5% being a 2, 12.5% being a 3, and 25% being a 5](spinner.png)
+$$E[X] = 0.5 * 1 + 0.125 * 2 + 0.125 * 3 + 0.25 * 5 = 2.375$$
+
 
 ### Independence and the Product Rule
 First and foremost, if _X_ and _Y_ are random variables, their **joint probability** is the probability that both result in specific events. The joint probability that _X_ results in outcome _x_ and _Y_ results in outcome _y_ is written as <img src="https://i.upmath.me/svg/P(X%3Dx%2C%20Y%3Dy)" alt="P(X=x, Y=y)" /> or <img src="https://i.upmath.me/svg/p(x%2C%20y)" alt="p(x, y)" />.
@@ -159,3 +164,8 @@ Using the product rule for random variables, we can obtain what's known as **Bay
 
 
 ¹ Text taken nearly directly from Predrag Radijovac and Marth White's _Machine Learning Handbook_ at https://marthawhite.github.io/mlcourse/notes.pdf
+
+## Variance and Standard Deviation
+### Variance
+### Standard Deviation
+### Normal Curves

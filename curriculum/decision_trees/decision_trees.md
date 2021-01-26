@@ -83,11 +83,11 @@ _This algorithm returns a node, as well as potentially children of that node and
 #### Entropy
 I highly, highly recommend looking at ![Benjamin Recaud's post about Entropy in Decision Trees](https://bricaud.github.io/personal-blog/entropy-in-decision-trees/). It offers a very intuitive explanation of what entropy is, and how the equation I'm about to mention arises though.
 
-Suppose you have a set of data points, $$S$$. Suppose that dataset is composed of $p$ datapoints of one true label (say, "red"), $q$ datapoints of another true label (say, "blue"). Then the (Shannon) **entropy** of $$S$$, $$H(S)$$ is just
+Suppose you have a set of data points, $$S$$. Suppose that dataset is composed of $$p$$ datapoints of one true label (say, "red"), $$q$$ datapoints of another true label (say, "blue"). Then the (Shannon) **entropy** of $$S$$, $$H(S)$$ is just
 
 $$H(S) = -(p\log_2(p) + q\log_2(q))$$
 
-More generally, suppose $S$ comprises a more diverse collection of labels. You might have $p_1$ datapoints of one true label, $p_2$ datapoints of another true label, $p_3$ datapoints that are a third true label... and so on. In this case, the entropy is given as
+More generally, suppose $$S$$ comprises a more diverse collection of labels. You might have $$p_1$$ datapoints of one true label, $$p_2$$ datapoints of another true label, $$p_3$$ datapoints that are a third true label... and so on. In this case, the entropy is given as
 
 $$\begin{align*}
 H(S) &= -(p_1\log_2(p_1) + p_2\log_2(p_2) + ...)

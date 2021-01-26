@@ -91,7 +91,7 @@ More generally, suppose $$S$$ comprises a more diverse collection of labels. You
 
 $$\begin{align*}
 H(S) &= -(p_1\log_2(p_1) + p_2\log_2(p_2) + ...)
-&= -\Sum_i {p_i \log_2(p_i)}
+&= -\displaystyle\sum_i {p_i \log_2(p_i)}
 \end{align*}$$
 
 

@@ -87,7 +87,7 @@ Suppose you have a set of data points, $$S$$. Suppose that dataset is composed o
 
 $$H(S) = -(p\log_2(p) + q\log_2(q))$$
 
-More generally, suppose $$S$$ comprises a more diverse collection of labelled vectors. You might have a proportion $$p_1$$ of datapoints of one true label, a proportion $$p_2$$ of datapoints of another true label, a proportion $$p_3$$ of datapoints that are a third true label... and so on. In this case, the entropy is given as
+More generally, suppose $$S$$ comprises vectors with a more diverse collection of labels. You might have a proportion $$p_1$$ of datapoints of one true label, a proportion $$p_2$$ of datapoints of another true label, a proportion $$p_3$$ of datapoints that are a third true label... and so on. In this case, the entropy is given as
 
 $$\begin{align*}
 H(S) &= -(p_1\log_2(p_1) + p_2\log_2(p_2) + ...)\\

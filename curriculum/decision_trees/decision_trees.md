@@ -96,7 +96,7 @@ H(S) &= -(p_1\log_2(p_1) + p_2\log_2(p_2) + ...)\\
 
 
 
-#### GINI Coefficient
+#### GINI Measure
 ## Forests
 ### Curse of Dimensionality
 ### Voting

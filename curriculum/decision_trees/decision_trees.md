@@ -81,7 +81,7 @@ _This algorithm returns a node, as well as potentially children of that node and
 
 ### Types of Purity
 #### Entropy
-I highly, highly recommend looking at [Benjamin Recaud's post about Entropy in Decision Trees](https://bricaud.github.io/personal-blog/entropy-in-decision-trees/). It offers a very intuitive explanation of what entropy is, and how the equation I'm about to mention arises.
+I highly, highly recommend looking at [Benjamin Recaud's post about entropy in decision trees](https://bricaud.github.io/personal-blog/entropy-in-decision-trees/). It offers a very intuitive explanation of what entropy is, and how the equation I'm about to mention arises.
 
 Suppose you have a set of data points, $$S$$. Suppose that dataset is composed of $$m$$ datapoints of one true label (say, "red"), and $$n$$ datapoints of another true label (say, "blue"). Then the proportion of vectors of the first label is just $$p=\frac{m}{n+m}$$ and $$q=\frac{n}{n+m}$$. The (Shannon) **entropy** of $$S$$, $$H(S)$$, then, is just
 

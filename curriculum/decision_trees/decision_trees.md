@@ -81,13 +81,13 @@ _This algorithm returns a node, as well as potentially children of that node and
 
 ### Types of Purity
 #### Entropy
-I highly, highly recommend looking at ![Benjamin Recaud's post about Entropy in Decision Trees](https://bricaud.github.io/personal-blog/entropy-in-decision-trees/). It offers a very intuitive explanation of what entropy is, and how the equation I'm about to mention arises though.
+I highly, highly recommend looking at [Benjamin Recaud's post about Entropy in Decision Trees](https://bricaud.github.io/personal-blog/entropy-in-decision-trees/). It offers a very intuitive explanation of what entropy is, and how the equation I'm about to mention arises though.
 
 Suppose you have a set of data points, $$S$$. Suppose that dataset is composed of $$m$$ datapoints of one true label (say, "red")/total number of vectors, and $$n$$ datapoints of another true label (say, "blue"). Then the proportion of vectors of the first label is just $$p=m/(n+m)$$ and $$q=n/(n+m). The (Shannon) **entropy** of $$S$$, $$H(S)$$, then, is just
 
 $$H(S) = -(p\log_2(p) + q\log_2(q))$$
 
-More generally, suppose $$S$$ comprises a more diverse collection of labels. You might have a proportion $$p_1$$ of datapoints of one true label, a proportion $$p_2$$ of datapoints of another true label, a proportion $$p_3$$ of datapoints that are a third true label... and so on. In this case, the entropy is given as
+More generally, suppose $$S$$ comprises a more diverse collection of labelled vectors. You might have a proportion $$p_1$$ of datapoints of one true label, a proportion $$p_2$$ of datapoints of another true label, a proportion $$p_3$$ of datapoints that are a third true label... and so on. In this case, the entropy is given as
 
 $$\begin{align*}
 H(S) &= -(p_1\log_2(p_1) + p_2\log_2(p_2) + ...)\\

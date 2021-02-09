@@ -10,7 +10,7 @@ nav_order: 2
 ![Neon lights spelling out Bayes's theorem](bayes_lights.png){: .d-flex	.flex-justify-around}
 ## Bayes's Theorem
 ### Introduction
-When dealing with probability, you're used to making decisions from observing the world around you - how often each side lands face-up on a die, what the proportion of weather you see outside each day, how long a piece of fruit lasts before going bad - but what happens, if, say, you have 5 rolls of a fair die that have happened to all land on '6'?
+When dealing with probability, you're used to making decisions from observing the world around you - how often each side lands face-up on a die, what the proportion is of weather you see outside each day, how long a piece of fruit lasts before going bad - but what happens if, say, you have 5 rolls of a fair die that have happened to all land on '6'?
 
 _Bayes's theorem_ is a way of reconciling some existing understanding of the world - a _prior belief_ - with some observations - _evidence_ - to form more nuanced predictions - a _posterior belief_. Before digging into these terms, let's motivate this a bit with a story.
 

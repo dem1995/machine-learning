@@ -18,7 +18,7 @@ Now, Darcy, Edgar, and Fatima have had conversations a number of times, and cert
 
 * Darcy tends to have a very reserved view of the world- they have very strong prior opinions, and casual events don't tend to change those.
  
-Before these events, Darcy _knows, with 100% certainty_ "clairvoyance isn't a thing". Darcy's thoughts going into this are what's called their prior, for them, it's effectively infinitely strong. Darcy's prior before seeing this is $$p(\text{"The carnival-woman is clairvoyant"})\approx 0$$, and that remains unchanged after her display.
+Before these events, Darcy _knows, with 100% certainty_ "clairvoyance isn't a thing". Darcy's thoughts going into this are what's called their prior, for them, it's effectively infinitely strong. Darcy's prior before seeing this is $$p(\text{"The carnival-woman is clairvoyant\unicode{x201D}})\approx 0$$, and that remains unchanged after her display.
  
 * Edgar, on the other hand, has a _very_ open mind - he takes on new viewpoints extremely readily
 
@@ -26,12 +26,12 @@ Before these events, Edgar believes that "clairvoyance isn't a thing"- but Edgar
 
 * Finally, Fatima takes a more balanced approach - she has a strong prior, but is open to changing it.
 
-Before these evevnts, Fatima believes that "clairvoyance isn't a thing" - however, with evidence, she's open to the idea the woman /might/ be clairvoyant. Her prior is strong - $$p(\text{\lq\lqThe carnival-woman is clairvoyant"}) = 1/1000)$$. Unlike Darcy, however, she updates her prior here-
+Before these evevnts, Fatima believes that "clairvoyance isn't a thing" - however, with evidence, she's open to the idea the woman /might/ be clairvoyant. Her prior is strong - $$p(\text{\unicode{x201C}The carnival-woman is clairvoyant\unicode{x201D}}) = 1/1000)$$. Unlike Darcy, however, she updates her prior here-
 
 $$
 \begin{align*}
-p(\text{\``\```The carnival-woman is clairvoyant"} | \text{3 right}) &= \frac{p(\text{3 right} | \text{`\lqThe carnival-woman is clairvoyant"}) \cdot p(\text{\lq\lqThe carnival-woman is clairvoyant"})}{p(\text{3 right})}\\
-                                                 &= \frac{1 \cdot \frac{1}{1000}}{p(\text{3 right} | \text{\lq\lqThe carnival-woman is clairoyant"})\cdot p(\text{\lq\lqThe carnival-woman is clairvoyant"}) + p(\text{3 right} | \text{\lq\lqThe carnival-woman is not clairoyant"}) \cdot p(\not\text{\lq\lqThe carnival-woman is clairvoyant")}}\\
+p(\text{\unicode{x201C}The carnival-woman is clairvoyant\unicode{x201D}} | \text{3 right}) &= \frac{p(\text{3 right} | \text{\unicode{x201C}The carnival-woman is clairvoyant\unicode{x201D}}) \cdot p(\text{\unicode{x201C}The carnival-woman is clairvoyant\unicode{x201D}})}{p(\text{3 right})}\\
+                                                 &= \frac{1 \cdot \frac{1}{1000}}{p(\text{3 right} | \text{\unicode{x201C}The carnival-woman is clairoyant\unicode{x201D}})\cdot p(\text{\unicode{x201C}The carnival-woman is clairvoyant\unicode{x201D}}) + p(\text{3 right} | \text{\unicode{x201C}The carnival-woman is not clairoyant\unicode{x201D}}) \cdot p(\not\text{\unicode{x201C}The carnival-woman is clairvoyant\unicode{x201D})}}\\
                                                  &= \frac{1 \cdot \frac{1}{1000}}{1 \cdot \frac{1}{1000} + \frac{999}{1000}\frac{1}{52}^{3}}\\
                                                  &\approx \frac{1}{999} 
 \end{align*}

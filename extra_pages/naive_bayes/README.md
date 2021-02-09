@@ -95,7 +95,7 @@ We're just about done - we can use this for our classifiers, in fact! We can tak
 ### The normalization term is irrelevant
 Consider the term in the denominator of Bayes's theorem, the probability of our evidence _B_, $$P(B)$$ (also called the normalization term). This depends _solely_ on the evidence we've observed. Now, consider that for our classifier we're just looking at different outcomes, which are $$A$$s, and trying to see which of these is maximized.
 
-But wait! When considering different outcomes, the evidence isn't changing at all, which means $$P(B)$$ is constant when we're just looking at a single vector of evidence! Since our evidence isn't changing, and since therefore $$P(B)$$ isn't changing, when looking at some evidence and trying to decide which of the $$A$$s is most likely, we can get rid of $$P(B)$$ and that'll change everythign by a constant - meaning the otucome $$A$$ that would be most likely will still be the most likely.
+But wait! When considering different outcomes, the evidence isn't changing at all, which means $$P(B)$$ is constant when we're just looking at a single vector of evidence! Since our evidence isn't changing, and since therefore $$P(B)$$ isn't changing, when looking at some evidence and trying to decide which of the $$A$$s is most likely, we can get rid of $$P(B)$$ and that'll change everything by a constant - meaning the outcome $$A$$ that would be most likely will still be the most likely.
 
 In this manner, we arrive at our final Naïve Bayes Classifier equation:
 

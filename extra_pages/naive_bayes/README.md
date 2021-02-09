@@ -38,6 +38,8 @@ $$
 \end{align*}
 $$
 
+![A spectrum from Darcy (infinitely strong prior) to Edgar (infinitely weak prior)](darcyfatimaedgar_spectrum.png)
+
 Fatima obviously had a very strong prior here, but the point is that her viewpoint lies somewhere between Darcy's and Edgar's - she used what she knew before-hand and incorporated her new observations to judge the situation. This is what's known as _Bayesian_ thinking - combining thoughts about some underlying distribution about how the world is set up and incorporating new observations into that expected framework.
 
 

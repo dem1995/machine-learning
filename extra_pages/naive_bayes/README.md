@@ -70,7 +70,11 @@ And this works! Realistically, however, we might have no idea about things like 
 ### Naïve Bayes
 So one of the issues we'll typically have is that different pieces of evidence might not be independent - for example, if $$B$$ is a vector containing information about whether it's raining out and how cold it is out, those two things are related! As such, $$P(\text{raining} \cap \text{warm} | A)$$ would be $$P(\text{raining} | \text{warm} \text{ and } A) \cdot P(\text{warm} \text{ and } A)$$ rather than being something more friendly like $$P(\text{raining} \cap \text{warm} | A) = P(\text{raining} | A) \cdot P(\text{warm} | A)$$ - you can imagine how this would get worse and worse the more evidentiary observations we have.
 
-So what's the solution? The solution is, succinctly - _pretend we can assume independence_. This might sound dumb (and it kinda is), but as it turns out most of the time this is a fairly good guess. When working with more important things we might want to run some more tests to verify that we can do this, of course, but in many cases this effectively lets us write Bayes's rule for arbitrarily many evidentiary observations $$B_1$$, $$B_2$$, ..., $$B_n$$ as 
+So what's the solution? The solution is, succinctly - _pretend we can assume independence_. 
+
+![Image of Luffy saying "isn't that naïve"](luffy_naive.jpeg)
+
+This might sound dumb (and it kinda is), but as it turns out most of the time this is a fairly good guess. When working with more important things we might want to run some more tests to verify that we can do this, of course, but in many cases this effectively lets us write Bayes's rule for arbitrarily many evidentiary observations $$B_1$$, $$B_2$$, ..., $$B_n$$ as 
 
 $$P(A|B)} =  {\operatorname{argmax}} {\frac{ (\prod_i^{n}P(B_i|A))\cdot P(A) }{ P(B) }$$
 
@@ -84,10 +88,31 @@ $$
 \end{align*}
 $$
 
+This assumption of independence is what's known as _Naïve Bayes_
+
+We're just about done - we can use this for our classifiers, in fact! We can take things _one_ more step further though.
+
+### The normalization term is irrelevant
+Consider the term in the denominator of Bayes's theorem, the probability of our evidence _B_, $$P(B)$$ (also called the normalization term). This depends _solely_ on the evidence we've observed. Now, consider that for our classifier we're just looking at different outcomes, which are $$A$$s, and trying to see which of these is maximized.
+
+But wait! When considering different outcomes, the evidence isn't changing at all, which means $$P(B)$$ is constant when we're just looking at a single vector of evidence! Since our evidence isn't changing, and since therefore $$P(B)$$ isn't changing, when looking at some evidence and trying to decide which of the $$A$$s is most likely, we can get rid of $$P(B)$$ and that'll change everythign by a constant - meaning the otucome $$A$$ that would be most likely will still be the most likely.
+
+In this manner, we arrive at our final Naïve Bayes Classifier equation:
+
+$$
+\begin{align*}
+\text{Bayes_Classifier}(B) &=  \underset{A \in \text{outcomes}}{\operatorname{argmax}}{P(A|B)} \\
+                           &=  \underset{A \in \text{outcomes}}{\operatorname{argmax}}{(\prod_i^{n}P(B_i|A))\cdot P(A)
+}
+\end{align*}
+$$
+
 # Acknowledgements
 Credit to Dr. Robert Kübler at [A Gentle Introduction to Bayesian Inference](https://towardsdatascience.com/a-gentle-introduction-to-bayesian-inference-6a7552e313cb) for the carnival/funfair setting for explaining Bayesian thinking.
 
 Credit for Neon Bayes Theorem image to Matt Buck via a pinterest page - <https://www.flickr.com/photos/mattbuck007/3676624894>. The image was taken at Autonomy in Cambridge.
+
+Credit for Luffy D. Monkey goes to Eiichiro Oda and his work, _One Piece_
 
 Credit for other images goes to the web builder, Dawn Estes McKnight
 

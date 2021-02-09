@@ -76,7 +76,7 @@ So what's the solution? The solution is, succinctly - _pretend we can assume ind
 
 This might sound dumb (and it kinda is), but as it turns out most of the time this is a fairly good guess. When working with more important things we might want to run some more tests to verify that we can do this, of course, but in many cases this effectively lets us write Bayes's rule for arbitrarily many evidentiary observations $$B_1$$, $$B_2$$, ..., $$B_n$$ as 
 
-$$P(A|B)} =  {\operatorname{argmax}} {\frac{ (\prod_i^{n}P(B_i|A))\cdot P(A) }{ P(B) }$$
+$$P(A|B) =  {\operatorname{argmax}} {\frac{ (\prod_i^{n}P(B_i|A))\cdot P(A) }{ P(B) }$$
 
 and so our classifier as
 

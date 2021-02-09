@@ -38,7 +38,7 @@ or, as a further visual,
 ![Matrix-vector multiplication visual](matmul.png)
 
 ### Motivating Example
-![Chocolate-chip cookies. Working on this example is making me want some realllllyy badly.](choc_chip_cookies.png){:height="225px" width="225px"}
+![Chocolate-chip cookies. Working on this example is making me want some realllllyy badly.](choc_chip_cookies.png){:height="225px" width="225px" .flex-justify-between}
 
 Now, suppose we're dealing with chocolate-chip cookies, and we want to encode information about the chocolate chips and cookie dough used. We might care about the volume, that is, how many Commonwealth cups\* of each we have. Suppose in our last batch of cookies we used 10 cups of dough and 2 cups of chocolate-chip cookies. We might represent this, then, as
 

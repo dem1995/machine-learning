@@ -6,9 +6,15 @@ mathjax: true
 nav_order: 2
 ---
 
-# Naïve Bayes
+# Naïve Bayes & Naïve Bayes Classifiers
 ![Neon lights spelling out Bayes's theorem](bayes_lights.png){: .d-flex	.flex-justify-around}
-## Introduction
+## Naïve Bayes
+### Introduction
+When dealing with probability, you're used to making decisions from observing the world around you - how often each side lands face-up on a die, what the proportion of weather you see outside each day, how long a piece of fruit lasts before going bad - but what happens, if, say, you have 5 rolls of a fair die that have happened to all land on '6'?
+
+_Bayes's theorem_ is a way of reconciling some existing understanding of the world - a _prior belief_ - with some observations - _evidence_ - to form more nuanced predictions - a _posterior belief_. Before digging into these terms, let's motivate this a bit with a story.
+
+### Motivation
 A group of three friends - Darcy, Edgar, and Fatima -  are at a carnival (in the good timeline, where we're not dealing with a pandemic). A woman comes up to them and tells them she's clairvoyant (she can see things with her mind's eye), and wants to demonstrate it to them by predicting cards of theirs. All three friends are willing to take her up on it - it's good fun, after all!
 
 The woman takes things more seriously than any of them expect, though, and by the end of her preparing and showing precautions they're convinced there's no way she's hiding anything- she's even using the deck Edgar had on him!
@@ -42,6 +48,14 @@ $$
 ![A spectrum from Darcy (infinitely strong prior) to Edgar (infinitely weak prior)](darcyfatimaedgar_spectrum.png)
 
 Fatima obviously had a very strong prior here, but the point is that her viewpoint lies somewhere between Darcy's and Edgar's - she used what she knew before-hand and incorporated her new observations to judge the situation. This is what's known as _Bayesian_ thinking - combining thoughts about some underlying distribution about how the world is set up and incorporating new observations into that expected framework.
+
+### Equation
+As mentioned before, _Bayes's theorem_ is a way of reconciling some existing understanding of the world - a _prior belief_ - with some observations - _evidence_ - to form more nuanced predictions - a _posterior belief_.
+
+![A graphic describing Bayes' theorem. P of A given B is denoted as Posterior (for event, given evidence), P of B given A is denoted as Likelihood (of evidence, given event), P(B) is denoted as Prior (for event), and P(B) is denoted as Normalization (probability of evidence)](bayes_theorem_graphic_v2.png)
+
+We're interested in what the probability of some outcome _A_ is given the evidence _B_ we're seeing - to find this, we multipy our _prior_ belief of the outcome A_ by the likelihood of the evidence_ B we're seeing if we assume the outcome _A_ is the case. The division by the probability of our evidence _B_ occurring is relevant for obtaining our actual posterior probability (our prediction), but as we shall see in a bit, for some applications is largely irrelevant.
+## Naïve Bayes Classifier
 
 
 # Acknowledgements

@@ -18,7 +18,7 @@ Now, Darcy, Edgar, and Fatima have had conversations a number of times, and cert
 
 * Darcy tends to have a very reserved view of the world- they have very strong prior opinions, and casual events don't tend to change those.
  
-Before these events, Darcy _knows, with 100% certainty_ "clairvoyance isn't a thing". Darcy's thoughts going into this are what's called their prior, for them, it's effectively infinitely strong. Darcy's prior before seeing this is $$p("The carnival-woman is clairvoyant")\approx 0$$, and that remains unchanged after her display.
+Before these events, Darcy _knows, with 100% certainty_ "clairvoyance isn't a thing". Darcy's thoughts going into this are what's called their prior, for them, it's effectively infinitely strong. Darcy's prior before seeing this is $$p(\text{"The carnival-woman is clairvoyant"})\approx 0$$, and that remains unchanged after her display.
  
 * Edgar, on the other hand, has a _very_ open mind - he takes on new viewpoints extremely readily
 

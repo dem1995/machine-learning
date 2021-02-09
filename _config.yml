@@ -5,6 +5,8 @@ remote_theme: pmarsceill/just-the-docs
 aux_links:
   "Source/Download":
     - "//github.com/dem1995/machine-learning"
+  '<button id="theme-toggle"></button>':
+    - '#"onclick="modeSwitcher()"'
 mathjax:
   source: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML
   config: 'MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "AMS" } } })'

@@ -26,14 +26,14 @@ Before these events, Edgar believes that "clairvoyance isn't a thing"- but Edgar
 
 * Finally, Fatima takes a more balanced approach - she has a strong prior, but is open to changing it.
 
-Before these evevnts, Fatima believes that "clairvoyance isn't a thing" - however, with evidence, she's open to the idea the woman /might/ be clairvoyant. Her prior is strong - $$p("The carnival-woman is clairvoyant") = 1/1000)$$. Unlike Darcy, however, she updates her prior here-
+Before these evevnts, Fatima believes that "clairvoyance isn't a thing" - however, with evidence, she's open to the idea the woman /might/ be clairvoyant. Her prior is strong - $$p(\text{"the carnival-woman is clairvoyant"}) = 1/1000)$$. Unlike Darcy, however, she updates her prior here-
 
 $$
 \begin{align*}
-p("The carnival-woman is clairvoyant" | 3 right) &= \frac{p(3 right | "The carnival-woman is clairvoyant") \cdot p("the carnival-woman is clairvoyant")}{p(3 right)}
-                                                 &= \frac{1 \cdot \frac{1}{1000}}{p(3 right | "The carnival-woman is clairoyant")\cdot p("The carnival-woman is clairvoyant") + p(3 right | "The carnival-woman is not clairoyant") \cdot p(\not"The carnival-woman is clairvoyant")}
+p(\text{"The carnival-woman is clairvoyant"} | 3 right) &= \frac{p(3 right | \text{"The carnival-woman is clairvoyant"}) \cdot p(\text{"The carnival-woman is clairvoyant"})}{p(3 right)}
+                                                 &= \frac{1 \cdot \frac{1}{1000}}{p(3 right | \text{"The carnival-woman is clairoyant"})\cdot p(\text{"The carnival-woman is clairvoyant"}) + p(3 right | \text{"The carnival-woman is not clairoyant"}) \cdot p(\not\text{"The carnival-woman is clairvoyant")}}
                                                  &= \frac{1 \cdot \frac{1}{1000}}{1 \cdot \frac{1}{1000} + \frac{999}{1000}\frac{1}{52}^{3}}
-												 &\approx \frac{1}{999} 
+                                                 &\approx \frac{1}{999} 
 \end{align*}
 $$
 

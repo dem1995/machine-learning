@@ -12,7 +12,7 @@ A group of three friends - Darcy, Edgar, and Fatima -  are at a carnival (in the
 
 The woman takes things more seriously than any of them expect, though, and by the end of her preparing and showing precautions they're convinced there's no way she's hiding anything- she's even using the deck Edgar had on him!
 
-The woman deals a card out to each of you, and guesses a 3 of ♥ (hearts), a 5 of ♦ (diamonds), and a jack of ♣ (clubs). Sure enough, these are precisely the cards taht Darcy, Edgar, and Fatima are holding! The three tip her generously for her time, and convene at a bar to discuss what they just saw.
+The woman deals a card out to each of you, and guesses a 3 of ♥ (hearts), a 5 of ♦ (diamonds), and a jack of ♣ (clubs). Sure enough, these are precisely the cards that Darcy, Edgar, and Fatima are holding! The three tip her generously for her time, and convene at a bar to discuss what they just saw.
 
 Now, Darcy, Edgar, and Fatima have had conversations a number of times, and certain trends have popped up.
 
@@ -30,9 +30,9 @@ Before these evevnts, Fatima believes that "clairvoyance isn't a thing" - howeve
 
 $$
 \begin{align*}
-p(\text{\lq\lqThe carnival-woman is clairvoyant"} | \text{3 right}) &= \frac{p(\text{3 right} | \text{\lq\lqThe carnival-woman is clairvoyant"}) \cdot p(\text{\lq\lqThe carnival-woman is clairvoyant"})}{p(\text{3 right})}
-                                                 &= \frac{1 \cdot \frac{1}{1000}}{p(\text{3 right} | \text{\lq\lqThe carnival-woman is clairoyant"})\cdot p(\text{\lq\lqThe carnival-woman is clairvoyant"}) + p(\text{3 right} | \text{\lq\lqThe carnival-woman is not clairoyant"}) \cdot p(\not\text{\lq\lqThe carnival-woman is clairvoyant")}}
-                                                 &= \frac{1 \cdot \frac{1}{1000}}{1 \cdot \frac{1}{1000} + \frac{999}{1000}\frac{1}{52}^{3}}
+p(\text{\`\`The carnival-woman is clairvoyant"} | \text{3 right}) &= \frac{p(\text{3 right} | \text{`\lqThe carnival-woman is clairvoyant"}) \cdot p(\text{\lq\lqThe carnival-woman is clairvoyant"})}{p(\text{3 right})}\\
+                                                 &= \frac{1 \cdot \frac{1}{1000}}{p(\text{3 right} | \text{\lq\lqThe carnival-woman is clairoyant"})\cdot p(\text{\lq\lqThe carnival-woman is clairvoyant"}) + p(\text{3 right} | \text{\lq\lqThe carnival-woman is not clairoyant"}) \cdot p(\not\text{\lq\lqThe carnival-woman is clairvoyant")}}\\
+                                                 &= \frac{1 \cdot \frac{1}{1000}}{1 \cdot \frac{1}{1000} + \frac{999}{1000}\frac{1}{52}^{3}}\\
                                                  &\approx \frac{1}{999} 
 \end{align*}
 $$

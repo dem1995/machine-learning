@@ -7,7 +7,7 @@ nav_order: 2
 ---
 
 # Naïve Bayes
-![Neon lights spelling out Bayes's theorem](bayes_lights.png){: .flex-justify-around}
+![Neon lights spelling out Bayes's theorem](bayes_lights.png){: .d-flex	.flex-justify-around}
 ## Introduction
 A group of three friends - Darcy, Edgar, and Fatima -  are at a carnival (in the good timeline, where we're not dealing with a pandemic). A woman comes up to them and tells them she's clairvoyant (she can see things with her mind's eye), and wants to demonstrate it to them by predicting cards of theirs. All three friends are willing to take her up on it - it's good fun, after all!
 

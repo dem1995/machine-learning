@@ -59,7 +59,32 @@ We're interested in what the probability of some outcome _A_ is given the eviden
 ### Classifier
 Deriving a classifier from _Bayes's theorem_ is pretty straightforward - we have a formula for figuring out the probability of some outcome occurring given our evidence, so what's the outcome with the highest probability? Formally, for some evidence _B_, this looks like
 
-$$\text{Bayes_Classifier}(B) = \underset{x}{\operatorname{argmax}}{test}$$
+$$
+\begin{align*}
+\text{Bayes_Classifier}(B) &=  \underset{A \in \text{outcomes}}{\operatorname{argmax}}{P(A|B)}
+                           &=  \underset{A \in \text{outcomes}}{\operatorname{argmax}}{\frac{P(B|A)\cdot P(A)}{P(B)}}
+\end{align*}
+$$
+
+And this works! Realistically, however, we might have no idea about things like $$P(B|A)$$, and it would be nice if we could lop off a few other pieces. Fortunately, we can!
+### Naïve Bayes
+So one of the issues we'll typically have is that different pieces of evidence might not be independent - for example, if $$B$$ is a vector containing information about whether it's raining out and how cold it is out, those two things are related! As such, $$P(\text{raining} \cap \text{warm} | A)$$ would be $$P(\text{raining} | \text{warm} \text{ and } A) \cdot P(\text{warm} \text{ and } A)$$ rather than being something more friendly like $$P(\text{raining} \cap \text{warm} | A) = P(\text{raining} | A) \cdot P(\text{warm} | A)$$ - you can imagine how this would get worse and worse the more evidentiary observations we have.
+
+So what's the solution? The solution is, succinctly - _pretend we can assume independence_. This might sound dumb (and it kinda is), but as it turns out most of the time this is a fairly good guess. When working with more important things we might want to run some more tests to verify that we can do this, of course, but in many cases this effectively lets us write Bayes's rule for arbitrarily many evidentiary observations $$B_1$$, $$B_2$$, ..., $$B_n$$ as 
+
+$$
+P(A|B)} =  {\operatorname{argmax}}{\frac{(\prod_i^{n}P(B_i|A))\cdot P(A)}{P(B)}
+$$
+
+and so our classifier as
+
+$$
+\begin{align*}
+\text{Bayes_Classifier}(B) &=  \underset{A \in \text{outcomes}}{\operatorname{argmax}}{P(A|B)}
+                           &=  \underset{A \in \text{outcomes}}{\operatorname{argmax}}{\frac{(\prod_i^{n}P(B_i|A))\cdot P(A)}{P(B)}
+}
+\end{align*}
+$$
 
 # Acknowledgements
 Credit to Dr. Robert Kübler at [A Gentle Introduction to Bayesian Inference](https://towardsdatascience.com/a-gentle-introduction-to-bayesian-inference-6a7552e313cb) for the carnival/funfair setting for explaining Bayesian thinking.

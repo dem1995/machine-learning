@@ -88,7 +88,7 @@ $$
 \end{align*}
 $$
 
-This assumption of independence is what's known as _Naïve Bayes_
+This assumption of independence is what's known as _Naïve Bayes_.
 
 We're just about done - we can use this for our classifiers, in fact! We can take things _one_ more step further though.
 

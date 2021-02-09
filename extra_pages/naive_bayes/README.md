@@ -56,8 +56,10 @@ As mentioned before, _Bayes's theorem_ is a way of reconciling some existing und
 
 We're interested in what the probability of some outcome _A_ is given the evidence _B_ we're seeing - to find this, we multipy our _prior_ belief of the outcome A _by the likelihood of the evidence_ B we're seeing if we assume the outcome _A_ is the case. The division by the probability of our evidence _B_ occurring is relevant for obtaining our actual posterior probability (our prediction), but as we shall see in a bit, for some applications is largely irrelevant.
 ## Naïve Bayes Classifier
-### Probabilistically
 ### Classifier
+Deriving a classifier from _Bayes's theorem_ is pretty straightforward - we have a formula for figuring out the probability of some outcome occurring given our evidence, so what's the outcome with the highest probability? Formally, for some evidence _B_, this looks like
+
+$$\text{Bayes_Classifier}(B) = \underset{x}{\operatorname{argmax}}{test}$$
 
 # Acknowledgements
 Credit to Dr. Robert Kübler at [A Gentle Introduction to Bayesian Inference](https://towardsdatascience.com/a-gentle-introduction-to-bayesian-inference-6a7552e313cb) for the carnival/funfair setting for explaining Bayesian thinking.

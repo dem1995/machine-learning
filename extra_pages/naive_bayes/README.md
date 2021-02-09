@@ -61,3 +61,7 @@ We're interested in what the probability of some outcome _A_ is given the eviden
 # Acknowledgements
 Credit to Dr. Robert Kübler at [A Gentle Introduction to Bayesian Inference](https://towardsdatascience.com/a-gentle-introduction-to-bayesian-inference-6a7552e313cb) for the carnival/funfair setting for explaining Bayesian thinking.
 
+Credit for Neon Bayes Theorem image to Matt Buck via a pinterest page - <https://www.flickr.com/photos/mattbuck007/3676624894>. The image was taken at Autonomy in Cambridge.
+
+Credit for other images goes to the web builder, Dawn Estes McKnight
+

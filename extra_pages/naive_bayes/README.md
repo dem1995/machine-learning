@@ -6,9 +6,9 @@ mathjax: true
 nav_order: 2
 ---
 
-# Naïve Bayes & Naïve Bayes Classifiers
+# Bayes's Theorem & Naïve Bayes Classifiers
 ![Neon lights spelling out Bayes's theorem](bayes_lights.png){: .d-flex	.flex-justify-around}
-## Naïve Bayes
+## Bayes's Theorem
 ### Introduction
 When dealing with probability, you're used to making decisions from observing the world around you - how often each side lands face-up on a die, what the proportion of weather you see outside each day, how long a piece of fruit lasts before going bad - but what happens, if, say, you have 5 rolls of a fair die that have happened to all land on '6'?
 
@@ -54,9 +54,10 @@ As mentioned before, _Bayes's theorem_ is a way of reconciling some existing und
 
 ![A graphic describing Bayes' theorem. P of A given B is denoted as Posterior (for event, given evidence), P of B given A is denoted as Likelihood (of evidence, given event), P(B) is denoted as Prior (for event), and P(B) is denoted as Normalization (probability of evidence)](bayes_theorem_graphic_v2.png)
 
-We're interested in what the probability of some outcome _A_ is given the evidence _B_ we're seeing - to find this, we multipy our _prior_ belief of the outcome A_ by the likelihood of the evidence_ B we're seeing if we assume the outcome _A_ is the case. The division by the probability of our evidence _B_ occurring is relevant for obtaining our actual posterior probability (our prediction), but as we shall see in a bit, for some applications is largely irrelevant.
+We're interested in what the probability of some outcome _A_ is given the evidence _B_ we're seeing - to find this, we multipy our _prior_ belief of the outcome A _by the likelihood of the evidence_ B we're seeing if we assume the outcome _A_ is the case. The division by the probability of our evidence _B_ occurring is relevant for obtaining our actual posterior probability (our prediction), but as we shall see in a bit, for some applications is largely irrelevant.
 ## Naïve Bayes Classifier
-
+### Probabilistically
+### Classifier
 
 # Acknowledgements
 Credit to Dr. Robert Kübler at [A Gentle Introduction to Bayesian Inference](https://towardsdatascience.com/a-gentle-introduction-to-bayesian-inference-6a7552e313cb) for the carnival/funfair setting for explaining Bayesian thinking.

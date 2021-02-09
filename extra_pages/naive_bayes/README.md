@@ -30,9 +30,9 @@ Before these evevnts, Fatima believes that "clairvoyance isn't a thing" - howeve
 
 $$
 \begin{align*}
-p("The carnival-woman is clairvoyant" | 3 right) &= \frac{p(3 right | "The carnival-woman is clairvoyant") * p("the carnival-woman is clairvoyant")}{p(3 right)}
-                                                 &= \frac{1 * \frac{1}{1000}}{p(3 right | "The carnival-woman is clairoyant")*p("The carnival-woman is clairvoyant") + p(3 right | "The carnival-woman is not clairoyant")*p(\not"The carnival-woman is clairvoyant")}
-                                                 &= \frac{1 * \frac{1}{1000}}{1 * \frac{1}{1000} + \frac{999}{1000}\frac{1}{52}^{3}}
+p("The carnival-woman is clairvoyant" | 3 right) &= \frac{p(3 right | "The carnival-woman is clairvoyant") \cdot p("the carnival-woman is clairvoyant")}{p(3 right)}
+                                                 &= \frac{1 \cdot \frac{1}{1000}}{p(3 right | "The carnival-woman is clairoyant")\cdot p("The carnival-woman is clairvoyant") + p(3 right | "The carnival-woman is not clairoyant") \cdot p(\not"The carnival-woman is clairvoyant")}
+                                                 &= \frac{1 \cdot \frac{1}{1000}}{1 \cdot \frac{1}{1000} + \frac{999}{1000}\frac{1}{52}^{3}}
 												 &\approx \frac{1}{999} 
 \end{align*}
 $$

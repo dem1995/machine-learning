@@ -32,7 +32,7 @@ $$
 \begin{align*}
 &p(\text{The carnival-woman is clairvoyant} | \text{3 right}) \\
 &= \frac{p(\text{3 right} | \text{The carnival-woman is clairvoyant}) \cdot p(\text{The carnival-woman is clairvoyant})}{p(\text{3 right})}\\
-                                                 &= \frac{1 \cdot \frac{1}{1000}}{p(\text{3 right} | \text{The carnival-woman is clairoyant})\cdot p(\text{The carnival-woman is clairvoyant}) + p(\text{3 right} | \text{The carnival-woman is not clairoyant}) \cdot p(\neg\text{The carnival-woman is clairvoyant)}}\\
+                                                 &= \frac{1 \cdot \frac{1}{1000}}{p(\text{3 right} | \text{...clairoyant})\cdot p(\text{...clairvoyant}) + p(\text{3 right} | \text{...clairoyant}) \cdot p(\neg\text{...clairvoyant)}}\\
                                                  &= \frac{1 \cdot \frac{1}{1000}}{1 \cdot \frac{1}{1000} + \frac{999}{1000}\frac{1}{52}^{3}}\\
                                                  &\approx \frac{1}{999} 
 \end{align*}

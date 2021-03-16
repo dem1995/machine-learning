@@ -1,0 +1,11 @@
+---
+layout: default
+title: Regularization
+parent: Curriculum
+mathjax: true
+nav_order: 7.5
+---
+
+
+### External Resources
+* [The difference between L1 and L2 regularization](https://explained.ai/regularization/L1vsL2.html) - the details of the differences between Differences between $$\ell_1$$ and $$\ell_2$$ regression

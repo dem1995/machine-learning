@@ -9,7 +9,7 @@ nav_order: 8
 
 ### External Resources
 Overview:
-* [Grant Sanderson (3Blue1Brown)'s "But What is a Neural Network?"](https://www.youtube.com/watch?v=aircAruvnKk&ab_channel=3Blue1Brown) beatiful animations/visuals for picturing what a basic Neural Network does/looks like. Also gives some intuition of the importance of explainanability/building up NNs from explainable features
+* [Grant Sanderson (3Blue1Brown)'s "But What is a Neural Network?"](https://www.youtube.com/watch?v=aircAruvnKk&ab_channel=3Blue1Brown) beatiful animations/visuals for picturing what a basic Neural Network does/looks like. Also gives some intuition of the importance of explainability/building up NNs from explainable features
 
 Gradients and Gradient Descent
 * ["Gradient Descent"](https://builtin.com/data-science/gradient-descent) - Good introductory page for learning rate, and a brief look at batch/stochastic GD

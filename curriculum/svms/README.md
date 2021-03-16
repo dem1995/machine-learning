@@ -2,6 +2,7 @@
 layout: default
 title: Support Vector Machines
 parent: Curriculum
+mathjax: true
 nav_order: 10
 ---
 
@@ -37,6 +38,8 @@ Sure, we could have some wonky underlying distribution, such as where the circle
 Looking at the line again, we've highlighted the closest vectors, known as the **_support vectors_** as well as indicated what we mean when we say "maximizing the distance to the closest sample in each class", also known as the **_margin_**.
 
 ![maximizing margin image](https://raw.githubusercontent.com/dem1995/algorithms/main/svms/maximum_margin.png)
+
+The margin can be imagined as a sort of street, where the separating hyperplane is the median and the the lines passing through the support vectors are the curbs.
 
 ### Support Vector Intuition
 Notice that, as the optimal hyperplane is that which separates the classes and maximizes the margin to the closest vectors (aka the support vectors), **the optimal hyperplane is entirely defined by the support vectors**. The support vectors are alternatively given as the collection of vectors that **lie on the margin boundary** (take a moment to convince yourself that these are the same).
@@ -83,6 +86,7 @@ The problem of finding which then boils down through some very nontrivial simpli
 {\textup{The hyperplane is separating}
 }" />
 
+Notice that the goal is to minimize $$\|\vec{w}\|$$. This can also be a thought of another way - in fact, because of how hard-margin SVMs are trained, the expression for the margin is $$\frac{2}{\|\vec{w}\|}$$ (and the distance from the separating hyperplane to one of those points is relatedly $$\frac{1}{\|\vec{w}\|}$$). As such, since the goal is to _maximize_ the margin ($$\frac{2}{\|\vec{w}\|}$$), that same goal is to _minimize_ $$\|\vec{w}\|$$.
 
 ## Soft-Margin SVMs (for non-linearly-separable data)
 Not all data is linearly separable, however. **For data that isn't linearly-separable, maximizing the margin does not necessarily minimize the error**. To accommodate for this, soft-margin SVMs use what's called a **slack parameter**, _**C**_, that can be tweaked to prioritize how much we want to **_maximize the margin_ versus how much we want to _minimize the error_**.

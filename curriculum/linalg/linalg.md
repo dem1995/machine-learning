@@ -109,6 +109,8 @@ $$a_1 v_1 + a_2 v_2 + ... + a_n v_n$$
 
 Put another way, it's any result of adding scaled things. It gets its name _linear_ because lines result from linear combinations of vectors constrained by equivalence with some scalar.
 
+Right-multiplying a matrix $$\mathbf{M}$$ by a vector $$\vec{x}$$ (that is, $$\mathbf{M}\vec{x}$$) can be viewed as linearly combining the columns of $$M$$ (where the scalar multiples are the elements of $$\vec{x}$$.
+
 ### Span
 Given a collection of vectors, you can combine them in different ways. Think of what you can do with just the vectors (0, 1) and (1, 0) - you can linearly combine them to reach any point in the xy plane.
 
@@ -237,3 +239,6 @@ You might notice that I'm mixing the terms matrix and transformation a bit - the
 
 ## Beyond Linear Transformations: Affine Transformations
 **Maybe TODO?** (bonus content anyways)
+
+# Acknowledgements
+Credit to Wawro, M., Rasmussen, C., Zandieh, M., Sweeney, G. F., & Larson, C. in their paper _An inquiry-oriented approach to span and linear independence: The case of the magic carpet ride sequence._ for the original magic carpet ride task. Full citation: **Wawro, M., Rasmussen, C., Zandieh, M., Sweeney, G. F., & Larson, C. (2012). _An inquiry-oriented approach to span and linear independence: The case of the magic carpet ride sequence._ PRIMUS, 22(8), 577-599.**

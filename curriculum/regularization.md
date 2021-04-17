@@ -7,7 +7,7 @@ nav_order: 7.5
 ---
 
 ### External Resources
-####Overview
+#### Overview
 Two very brief reads are given below - a linked Quora post, as well as the introduction section and the "Classification" section of the Wikipedia page.
 Read the Quora post, then skim the Wikipedia page. This should be enough to get the basics of regularization
 * [What is regularization in Machine learning?](https://www.quora.com/What-is-regularization-in-machine-learning)

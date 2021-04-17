@@ -88,7 +88,7 @@ To obtain a Darcy Chocolate Chip Cookie score(TM) of
 
 $$D(\vec{x})=0.9\vec{x}_{chocolate} - 0.1\vec{x}_{dough}$$
 
-This is what's known as a _linear combination_ - the result depends only on adding multiples of the cookie dough and the chocolate chips - and the transformation can be represented in matrix form.
+This is what's known as a _linear combination_ of chocolate and cookie dough values - the result depends only on adding multiples of the cookie dough and the chocolate chips - and the transformation can be represented in matrix form.
 
 $$\mathbf{D}=\begin{bmatrix}
 -0.1 & 0.9\\
@@ -115,8 +115,6 @@ Right-multiplying a matrix $$\mathbf{M}$$ by a vector $$\vec{x}$$ (that is, $$\m
 Given a collection of vectors, you can combine them in different ways. Think of what you can do with just the vectors (0, 1) and (1, 0) - you can linearly combine them to reach any point in the xy plane.
 
 **Exercise:**
-
-
 Suppose you are on a grid and at the position $$\begin{bmatrix} 0\\ 0 \end{bmatrix}$$. You are on a journey to Old Man Gauss's house, and have been given a red hoverboard and a blue magic carpet to get there. 
 
 The red hoverboard can move in (possibly fractional or negative) multiples of $$\begin{bmatrix}
@@ -149,7 +147,6 @@ Consider the 2D plane under standard Cartesian coordinates (the xy plane you've 
 It takes at least two vectors to span a 2D space. We say "at least", because there are certain sets of vectors that still won't be able to span the whole space. For example, consider the set of vectors $$\{\vec{v_1}=\begin{bmatrix}0 & 1\end{bmatrix}^\intercal, \vec{v_2}=\begin{bmatrix}0 & 3.5\end{bmatrix}^\intercal\}$$. The span of these vectors is the entire x-axis, but nothing else!
 
 ### Linear Dependence/Independence
-
 Here, $$v_2$$ is what's known as **linearly dependent** on $$v_1$$ (and vice-versa). This is because $$v_2$$ is a scalar multiple of $$v_1$$:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$v_2=3.5v_1$$
 
 More generally, a vector $$v_n$$ is linearly dependent on a set of vectors $$\{v_1, v_2, ..., v_{n-1}\}$$ if $$v_n$$ can be expressed as a linear combination of that set of vectors - i.e. there is some set of constants such that
